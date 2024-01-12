@@ -26,25 +26,25 @@ INCLUDE zgk_alltab_manipulate_pai_1.
 </div>
 
 <div>
- ## CLASS lcl_main DEFINITION.
+ CLASS lcl_main DEFINITION. <br>
 
-  PUBLIC SECTION.
+  PUBLIC SECTION. <br>
+ 
+  CLASS-METHODS: <br>
+                get_table, <br>
+                call_screen100, <br>
+                pbo, <br>
+                pai, <br>
+                create_container, <br>
+                build_fieldcat, <br>
+                exclude_tb_functions, <br>
+                layout, <br>
+                display_alv, <br>
+                display_tab. <br>
 
-  CLASS-METHODS:
-                get_table,
-                call_screen100,
-                pbo,
-                pai,
-                create_container,
-                build_fieldcat,
-                exclude_tb_functions,
-                layout,
-                display_alv,
-                display_tab.
 
 
-
-ENDCLASS.
+ENDCLASS. <br>
 </div>
 
 ![image](https://github.com/GrzegorzKraszewski/GK_Sap_Abap_main_projects/assets/141272893/1138955d-5981-4684-a82f-060c10b50fa1)
