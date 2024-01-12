@@ -16,6 +16,6 @@ INCLUDE zgk_alltab_manipulate_pai_1.
 
 <div>
 *&---------------------------------------------------------------------*  <br>
-***& Include      <h5 id="top1">INCLUDE zgk_alltab_manipulate_top_1</h5>** <br>     
+*& Include      <h5 id="top1">INCLUDE zgk_alltab_manipulate_top_1</h5> <br>     
 *&---------------------------------------------------------------------*  <br>
 </div>
