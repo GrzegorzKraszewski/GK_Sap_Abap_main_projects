@@ -1,6 +1,7 @@
 
 <a href="#top1">INCLUDE zgk_alltab_manipulate_top_1.</a>
 
+<h2 id="top1b"></h2>
 <a href="#d011">INCLUDE zgk_alltab_manipulate_d01_1.</a>
 
 INCLUDE zgk_alltab_manipulate_I01_1.
@@ -20,7 +21,7 @@ INCLUDE zgk_alltab_manipulate_pai_1.
 
 
 <div>
-<p>*&---------------------------------------------------------------------*</p><h5 id="d011">INCLUDE zgk_alltab_manipulate_d01_1</h5>*&---------------------------------------------------------------------*  <br>
+<p>*&---------------------------------------------------------------------*</p><h5 id="d011">INCLUDE zgk_alltab_manipulate_d01_1</h5>   <a href="#top1b">Back to main includes</a>*&---------------------------------------------------------------------*  <br>
 </div>
 
 <div>
