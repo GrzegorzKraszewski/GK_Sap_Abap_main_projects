@@ -26,7 +26,7 @@ INCLUDE zgk_alltab_manipulate_pai_1.
 </div>
 
 <div>
-  CLASS lcl_main DEFINITION.
+ ## CLASS lcl_main DEFINITION.
 
   PUBLIC SECTION.
 
