@@ -14,6 +14,8 @@ INCLUDE zgk_alltab_manipulate_pbo_1.
 INCLUDE zgk_alltab_manipulate_pai_1.
 
 
+<div>
 *&---------------------------------------------------------------------*
 *& Include          INCLUDE zgk_alltab_manipulate_top_1
 *&---------------------------------------------------------------------*
+</div>
