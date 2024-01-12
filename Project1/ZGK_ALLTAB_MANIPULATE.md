@@ -21,7 +21,7 @@ INCLUDE zgk_alltab_manipulate_pai_1.
 
 
 <div>
-<p>*&---------------------------------------------------------------------*</p><h5 id="d011">INCLUDE zgk_alltab_manipulate_d01_1</h5>   <a href="#top1b">Back to main includes</a>
+<p>*&---------------------------------------------------------------------*</p><h5 id="d011">INCLUDE zgk_alltab_manipulate_d01_1</h5>   <a href="#top1b">Back to main includes</a> <br>
  *&---------------------------------------------------------------------*  <br>
 </div>
 
