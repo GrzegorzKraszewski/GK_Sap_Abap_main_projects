@@ -1,7 +1,7 @@
 
 <a href="#top1">INCLUDE zgk_alltab_manipulate_top_1.</a>
 
-<h6 id="top1b"></h6>
+<h7 id="top1b"></h7>
 <a href="#d011">INCLUDE zgk_alltab_manipulate_d01_1.</a>
 
 INCLUDE zgk_alltab_manipulate_I01_1.
