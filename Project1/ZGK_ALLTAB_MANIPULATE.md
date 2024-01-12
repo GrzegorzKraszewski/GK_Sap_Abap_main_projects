@@ -1,7 +1,8 @@
 
+<h6 id="top1b"></h6>
 <a href="#top1">INCLUDE zgk_alltab_manipulate_top_1.</a>
 
-<h6 id="top1b"></h6>
+<h6 id="d011b"></h6>
 <a href="#d011">INCLUDE zgk_alltab_manipulate_d01_1.</a>
 
 INCLUDE zgk_alltab_manipulate_I01_1.
@@ -14,14 +15,16 @@ INCLUDE zgk_alltab_manipulate_pai_1.
 
 
 
-<p>*&---------------------------------------------------------------------*</p><h5 id="top1">INCLUDE zgk_alltab_manipulate_top_1</h5>*&---------------------------------------------------------------------*  
+<p>*&---------------------------------------------------------------------*</p><h5 id="top1">INCLUDE zgk_alltab_manipulate_top_1</h5>
+ <a href="#top1b">Back to main includes</a> <br>
+*&---------------------------------------------------------------------*  
 
 
 ![image](https://github.com/GrzegorzKraszewski/GK_Sap_Abap_main_projects/assets/141272893/d56544dc-e52e-4a07-87ea-34a060361832)
 
 
 <div>
-<p>*&---------------------------------------------------------------------*</p><h5 id="d011">INCLUDE zgk_alltab_manipulate_d01_1</h5>   <a href="#top1b">Back to main includes</a> <br>
+<p>*&---------------------------------------------------------------------*</p><h5 id="d011">INCLUDE zgk_alltab_manipulate_d01_1</h5>   <a href="#d011b">Back to main includes</a> <br>
  *&---------------------------------------------------------------------*  <br>
 </div>
 
