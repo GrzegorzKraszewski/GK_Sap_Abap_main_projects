@@ -80,4 +80,4 @@ ENDCLASS.
 ![image](https://github.com/GrzegorzKraszewski/GK_Sap_Abap_main_projects/assets/141272893/1138955d-5981-4684-a82f-060c10b50fa1)
 
 
-![Zrzut ekranu (1224)](https://github.com/user-attachments/assets/e17dc040-3ea2-40df-9b85-2511232adf21)
+
