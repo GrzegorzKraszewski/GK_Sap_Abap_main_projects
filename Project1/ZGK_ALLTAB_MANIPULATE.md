@@ -52,3 +52,29 @@ ENDCLASS. <br>
 
 ![image](https://github.com/GrzegorzKraszewski/GK_Sap_Abap_main_projects/assets/141272893/1138955d-5981-4684-a82f-060c10b50fa1)
 
+
+
+```console
+ CLASS lcl_main DEFINITION. <br>
+
+  PUBLIC SECTION. <br>
+ 
+  CLASS-METHODS: <br>
+                get_table, <br>
+                call_screen100, <br>
+                pbo, <br>
+                pai, <br>
+                create_container, <br>
+                build_fieldcat, <br>
+                exclude_tb_functions, <br>
+                layout, <br>
+                display_alv, <br>
+                display_tab. <br>
+
+
+
+ENDCLASS. <br>
+</div>
+```
+
+dfsdfdsf
