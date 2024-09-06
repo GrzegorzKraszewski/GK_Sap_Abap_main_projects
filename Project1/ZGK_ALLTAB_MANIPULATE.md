@@ -55,11 +55,11 @@ ENDCLASS. <br>
 
 
 ```console
- CLASS lcl_main DEFINITION. <br>
+ CLASS lcl_main DEFINITION. 
 
-  PUBLIC SECTION. <br>
+  PUBLIC SECTION. 
  
-  CLASS-METHODS: <br>
+  CLASS-METHODS: 
                 get_table, <br>
                 call_screen100, <br>
                 pbo, <br>
@@ -73,8 +73,8 @@ ENDCLASS. <br>
 
 
 
-ENDCLASS. <br>
-</div>
+ENDCLASS.
+
 ```
 
 dfsdfdsf
