@@ -4,6 +4,8 @@ These program shows the way how you can generate formula/calculations using js e
 
 Final result:<br><br>
 
+![JS_EVAL_LOOK](https://github.com/user-attachments/assets/12466be9-d3ba-4409-b7b0-b8ec87dfa51e)
+
 Usage:<br><br>
 
 
