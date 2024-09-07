@@ -7,7 +7,7 @@ Final look of program:<br><br>
 
 
 <h6 id="usageb"></h6>
-<h6> Too see usage/behavior of program please click <a href="#usage">here</a></h6><br><br>
+ Too see usage/behavior of program please click <a href="#usage">here</a><br><br>
 
 
 Source code: <br><br><br>
