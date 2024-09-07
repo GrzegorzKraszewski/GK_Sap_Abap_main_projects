@@ -4,7 +4,7 @@ These program shows the way how you can generate formula/calculations using js e
 
 Final look of program:<br><br>
 
-![JS_EVAL_LOOK](https://github.com/user-attachments/assets/12466be9-d3ba-4409-b7b0-b8ec87dfa51e)
+
 
 <h6 id="usageb"></h6>
 Too see usage/behavior of program please click <a href="#usage">here</a><br><br>
