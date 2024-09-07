@@ -3,7 +3,7 @@
 This program shows the way how you can generate formula/calculations using js evaluator class and macros in SAP ABAP <br><br>
 
 Final look of program:<br><br>
-@@ text in purple (and bold)@@
+
 
 
 <h6 id="usageb"></h6>
