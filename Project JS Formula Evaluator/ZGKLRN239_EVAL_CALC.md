@@ -2,7 +2,7 @@
 
 This program shows the way how you can generate formula/calculations using js evaluator class and macros in SAP ABAP <br><br>
 
-Final look of program:<br><br>
+@@ Final look of program:<br><br> in red@@
 
 
 
