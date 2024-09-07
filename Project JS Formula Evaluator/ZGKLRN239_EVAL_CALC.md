@@ -162,6 +162,6 @@ DATA:lv_line_edit_sub  TYPE i.
 *&---------------------------------------------------------------------*  
 
 
-<h5 id="usage"> <a href="#usageb">Back top</a></h5>
+Usage/behavior of program :         <h5 id="usage"> <a href="#usageb">Back top</a></h5>
 
 
