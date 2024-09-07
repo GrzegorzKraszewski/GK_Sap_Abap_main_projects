@@ -159,10 +159,9 @@ DATA:lv_line_edit_sub  TYPE i.
 
 <p>*&---------------------------------------------------------------------*</p><h5 id="d01"><a href="#d011b">INCLUDE zgklrn239_eval_calc_d01_1</a></h5>
  <a href="#d011b">Back to main includes</a> <br>
-*&---------------------------------------------------------------------* <br><br>   
+*&---------------------------------------------------------------------* <br><br> <br><br> 
 
 
-Usage/behavior of program :        
-<h5 id="usage"> <a href="#usageb">Back top</a></h5>
+Usage/behavior of program : <h5 id="usage"> <a href="#usageb">Back top</a></h5>
 <br><br>   
 
