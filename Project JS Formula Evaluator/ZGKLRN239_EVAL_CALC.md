@@ -7,7 +7,7 @@ Source code: <br><br><br>
 *& <br>
 *&---------------------------------------------------------------------*<br>
 REPORT zgklrn239_eval_calc MESSAGE-ID zlrn239_msg_eval_cal.<br>
-<br><br>
+<br>
 
 <h6 id="top1b"></h6>
 <a href="#top1">INCLUDE zgklrn239_eval_calc_top_1..</a>
