@@ -167,6 +167,14 @@ Usage/behavior of program : <h5 id="usage"> <a href="#usageb">Back top</a></h5>
 
 <h3>JS Operators</h3>
 
+<ul>
+<li>Punkt pierwszy</li>
+<li>Punkt drugi</li>
+<li>Punkt trzeci</li>
+</ul>
+
+
+
 
 
 
