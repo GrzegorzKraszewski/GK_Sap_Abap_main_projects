@@ -171,7 +171,7 @@ DATA:lv_line_edit_sub  TYPE i.
 <ol type="a">
 
 <li>Supported</li>
-
+<br><br>
 <ul>
 <li>Addition(+)</li>
 <li>Subtraction(-)</li>
@@ -179,8 +179,9 @@ DATA:lv_line_edit_sub  TYPE i.
 <li>Division(/)</li> 
 <li>Modulus(%)</li>
 </ul>
-
+<br>
 <li>Not supported</li>
+<br><br>
 <ul>
 <li>Increment(++)</li>
 <li>Decrement(--)</li>
