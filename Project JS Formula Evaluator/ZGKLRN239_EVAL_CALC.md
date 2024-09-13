@@ -170,25 +170,16 @@ DATA:lv_line_edit_sub  TYPE i.
 
 <ol type="a">
 
-<ul>
-
 <li>Supported</li>
-       
+
+<ul>
 <li>Addition(+)</li>
-
-
 <li>Subtraction(-)</li>
-
-
 <li>Multiplication(*)</li>
-
-
-<li>Division(/)</li>
-
-
-       
+<li>Division(/)</li> 
 </ul>
 
+<li>Not supported</li>
 
 </ol>
 
