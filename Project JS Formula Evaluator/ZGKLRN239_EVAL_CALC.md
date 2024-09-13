@@ -177,10 +177,14 @@ DATA:lv_line_edit_sub  TYPE i.
 <li>Subtraction(-)</li>
 <li>Multiplication(*)</li>
 <li>Division(/)</li> 
+<li>Modulus(%)</li>
 </ul>
 
 <li>Not supported</li>
-
+<ul>
+<li>Increment(++)</li>
+<li>Decrement(--)</li>
+</ul>
 </ol>
 
 <br><br>
