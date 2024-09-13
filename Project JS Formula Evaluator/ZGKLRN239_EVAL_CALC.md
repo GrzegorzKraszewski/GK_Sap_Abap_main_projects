@@ -162,13 +162,17 @@ DATA:lv_line_edit_sub  TYPE i.
 *&---------------------------------------------------------------------* <br><br> <br><br> 
 
 
-Usage/behavior of program : <h5 id="usage"> <a href="#usageb">Back top</a></h5>
+<h2>Usage/behavior of program : </h2>  <h5 id="usage"> <a href="#usageb">Back top</a></h5>
 <br><br>   
 
 <h3>JS Operators</h3>
 
+
+<ol type="a">
+
 <ul>
 
+<li>Supported</li>
        
 <li>Addition(+)</li>
 
@@ -185,6 +189,8 @@ Usage/behavior of program : <h5 id="usage"> <a href="#usageb">Back top</a></h5>
        
 </ul>
 
+
+</ol>
 
 
 
