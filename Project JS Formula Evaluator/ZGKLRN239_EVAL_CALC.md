@@ -173,19 +173,20 @@ DATA:lv_line_edit_sub  TYPE i.
 <li>Supported</li>
 <br>
 <ul>
-<li>Addition(+)</li>
-<li>Subtraction(-)</li>
-<li>Multiplication(*)</li>
-<li>Division(/)</li> 
-<li>Modulus(%)</li>
+<li>Addition ( + ) </li>
+<li>Subtraction ( - ) </li>
+<li>Multiplication ( * ) </li>
+<li>Division ( / ) </li> 
+<li>Modulus ( % ) </li>
 </ul>
 <br>
 <li>Not supported</li>
 <br>
 <ul>
-<li>Increment(++)</li>
-<li>Decrement(--)</li>
-<li>Exponentiation(**)=>use this</li> 
+<li> Assignment (=) </li>
+<li>Increment ( ++ ) </li>
+<li>Decrement ( -- ) </li>
+<li>Exponentiation ( ** )   =>use this</li> 
 </ul>
 </ol>
 
