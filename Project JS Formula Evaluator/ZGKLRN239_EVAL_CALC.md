@@ -165,3 +165,9 @@ DATA:lv_line_edit_sub  TYPE i.
 Usage/behavior of program : <h5 id="usage"> <a href="#usageb">Back top</a></h5>
 <br><br>   
 
+<h3>JS Operators</h3>
+
+
+
+
+
