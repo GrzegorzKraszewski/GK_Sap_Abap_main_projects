@@ -188,7 +188,7 @@ DATA:lv_line_edit_sub  TYPE i.
 <li> Assignment (=) </li>
 <li>Increment ( ++ ) </li>
 <li>Decrement ( -- ) </li>
-<li>Exponentiation ( ** )   =>use this</li> 
+<li>Exponentiation ( ** )   =>use this object Math.pow()</li> 
 </ul>
 </ol>
 
