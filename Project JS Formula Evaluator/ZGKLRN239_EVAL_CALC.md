@@ -185,6 +185,7 @@ DATA:lv_line_edit_sub  TYPE i.
 <ul>
 <li>Increment(++)</li>
 <li>Decrement(--)</li>
+<li>Exponentiation(**)=>use this</li> 
 </ul>
 </ol>
 
