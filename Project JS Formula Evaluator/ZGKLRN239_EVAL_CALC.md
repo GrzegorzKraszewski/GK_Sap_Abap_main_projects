@@ -180,6 +180,11 @@ DATA:lv_line_edit_sub  TYPE i.
 <li>Multiplication ( * ) </li>
 <li>Division ( / ) </li> 
 <li>Modulus ( % ) </li>
+<li>equal to ( == ) </li>
+<li>not equal ( != ) </li>
+<li> greater than ( > ) </li>
+<li> less than ( < ) </li>
+<li> less than ( < ) </li>
 </ul>
 <br>
 <li>Not supported</li>
