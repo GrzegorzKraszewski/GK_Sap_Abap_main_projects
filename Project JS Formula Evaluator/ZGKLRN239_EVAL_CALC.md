@@ -197,6 +197,9 @@ DATA:lv_line_edit_sub  TYPE i.
 </ul>
 </ol>
 
+<br>
+<h3>Comparison and Logical Operators</h3>
+
 <br><br>
 <h3>More compleks formula</h3>
 
