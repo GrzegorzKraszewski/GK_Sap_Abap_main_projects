@@ -248,8 +248,17 @@ DATA:lv_line_edit_sub  TYPE i.
 <br>
 </ul>
 <li>join</li>
+
+![Array join](https://github.com/user-attachments/assets/8461c0ee-f1d8-4de6-aca8-fd36ec2e5953)
+
 <li>lenght</li>
+
+![Array lenght](https://github.com/user-attachments/assets/a664dc4f-1450-4f79-9cb7-b44650994565)
+
 <li>[]</li>
+
+![''](https://github.com/user-attachments/assets/3bd67458-795f-428b-aa2c-cb501c365d33)
+
 </ul>
 
 
