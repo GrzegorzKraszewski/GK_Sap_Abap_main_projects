@@ -4,7 +4,7 @@
 
 <h3>Key factors</h3><br><br> 
 <p>We aren't declairng variables in editor as let, var etc.</p>
-<p>Posiible variables to use are embedded in var listbox => there are used macros for it</p>
+<p>Posible variables to use are embedded in var listbox => there are used macros for it</p>
 
 <h3>Final look of program:</h3><br><br> 
 
