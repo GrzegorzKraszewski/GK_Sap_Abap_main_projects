@@ -216,6 +216,8 @@ DATA:lv_line_edit_sub  TYPE i.
 <li>length</li>
 <li>charAt()</li>
 <li>Property Access [ ]</li>
+<li>substring()</li>
+<li>substr()</li>
 </ul>
 
 <br><br>
