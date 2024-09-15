@@ -180,11 +180,7 @@ DATA:lv_line_edit_sub  TYPE i.
 <li>Multiplication ( * ) </li>
 <li>Division ( / ) </li> 
 <li>Modulus ( % ) </li>
-<li>equal to ( == ) </li>
-<li>not equal ( != ) </li>
-<li> greater than ( > ) </li>
-<li> less than ( < ) </li>
-<li> less than ( < ) </li>
+>
 </ul>
 <br>
 <li>Not supported</li>
@@ -199,6 +195,16 @@ DATA:lv_line_edit_sub  TYPE i.
 
 <br>
 <h3>Comparison and Logical Operators</h3>
+
+<li>equal to ( == ) </li>
+<li>not equal ( != ) </li>
+<li> greater than ( > ) </li>
+<li> less than ( < ) </li>
+<li> greater than or equal to ( >= ) </li
+<li> less than or equal to ( <= ) </li
+<li> logical and ( && ) </li
+<li> logical or ( || ) </li
+<li> logical not ( ! ) </li
 
 <br><br>
 <h3>More compleks formula</h3>
