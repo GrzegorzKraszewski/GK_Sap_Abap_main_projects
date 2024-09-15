@@ -217,9 +217,21 @@ DATA:lv_line_edit_sub  TYPE i.
 <br>
 </ul>
 <li>min</li>
+
+![Math min](https://github.com/user-attachments/assets/7d869193-00b8-49d2-af08-e32631140a86)
+
 <li>max</li>
+
+![Math max](https://github.com/user-attachments/assets/21f17eed-0c6b-4005-94dd-e753e8973aef)
+
 <li>pow</li>
+
+![Math pow](https://github.com/user-attachments/assets/7932043f-9d32-46bc-92bb-b31b0a699a0d)
+
 <li>round</li>
+
+![Math Round](https://github.com/user-attachments/assets/6af4fecf-9df2-4fef-9dc2-831e90e2ea86)
+
 <li>ceil</li>
 <li>floor</li>
 <li>abs</li>
