@@ -182,7 +182,6 @@ DATA:lv_line_edit_sub  TYPE i.
 <li>Multiplication ( * ) </li>
 <li>Division ( / ) </li> 
 <li>Modulus ( % ) </li>
->
 </ul>
 <br>
 <li>Not supported</li>
@@ -197,7 +196,7 @@ DATA:lv_line_edit_sub  TYPE i.
 
 <br>
 <h3>JS Comparison and Logical Operators</h3>
-
+</ul>
 <li>equal to ( == ) </li>
 <li>not equal ( != ) </li>
 <li> greater than ( > ) </li>
@@ -207,11 +206,12 @@ DATA:lv_line_edit_sub  TYPE i.
 <li> logical and ( && ) </li>
 <li> logical or ( || ) </li>
 <li> logical not ( ! ) </li>
+</ul>
 
-!['' lenght](https://github.com/user-attachments/assets/8683c0df-e4d5-4899-aa2b-203664b64409)
 
 <br>
 <h3>String methods</h3>
+
 <li>length</li>
 !['' lenght](https://github.com/user-attachments/assets/8683c0df-e4d5-4899-aa2b-203664b64409)
 <li>charAt()</li>
