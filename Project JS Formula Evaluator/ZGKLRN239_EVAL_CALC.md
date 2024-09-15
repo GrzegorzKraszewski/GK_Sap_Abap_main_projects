@@ -230,6 +230,11 @@ DATA:lv_line_edit_sub  TYPE i.
 !['' substring( , )](https://github.com/user-attachments/assets/a9424bc0-c49f-4c06-9dca-f82d96962c47)
 
 <li>substr()</li>
+
+!['' substr( , )](https://github.com/user-attachments/assets/09eb3b74-e1f8-4fee-a077-a36670c52ba6)
+
+!['' substr( -) get last char](https://github.com/user-attachments/assets/288a08ad-2da7-40c9-a693-a42b4b6ef7e0)
+
 </ul>
 <br>
 
