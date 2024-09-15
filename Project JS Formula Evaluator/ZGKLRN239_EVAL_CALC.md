@@ -208,6 +208,8 @@ DATA:lv_line_edit_sub  TYPE i.
 <li> logical or ( || ) </li>
 <li> logical not ( ! ) </li>
 
+!['' lenght](https://github.com/user-attachments/assets/8683c0df-e4d5-4899-aa2b-203664b64409)
+
 <br>
 <h3>String methods</h3>
 <li>length</li>
