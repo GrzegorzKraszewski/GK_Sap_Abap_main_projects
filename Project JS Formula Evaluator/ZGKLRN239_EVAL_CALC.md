@@ -239,7 +239,17 @@ DATA:lv_line_edit_sub  TYPE i.
 !['' substr( -) get last char](https://github.com/user-attachments/assets/288a08ad-2da7-40c9-a693-a42b4b6ef7e0)
 
 </ul>
+
+
 <br>
+
+<h3>JS Array Methods</h3>
+<br>
+</ul>
+<li>join</li>
+<li>lenght</li>
+<li>[]</li>
+</ul>
 
 
 <br><br>
