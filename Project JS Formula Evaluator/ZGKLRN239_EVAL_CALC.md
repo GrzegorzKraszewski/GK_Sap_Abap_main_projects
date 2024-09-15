@@ -226,6 +226,9 @@ DATA:lv_line_edit_sub  TYPE i.
 ![''](https://github.com/user-attachments/assets/e1651ed5-5b7a-4f69-bde0-6b5ea84e24a2)
 
 <li>substring()</li>
+
+!['' substring( , )](https://github.com/user-attachments/assets/a9424bc0-c49f-4c06-9dca-f82d96962c47)
+
 <li>substr()</li>
 </ul>
 <br>
