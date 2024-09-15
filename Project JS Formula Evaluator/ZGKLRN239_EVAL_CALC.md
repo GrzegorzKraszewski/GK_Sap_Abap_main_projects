@@ -222,6 +222,9 @@ DATA:lv_line_edit_sub  TYPE i.
 !['' charAt()](https://github.com/user-attachments/assets/3acd268a-488e-4254-a992-8ac56be25951)
 
 <li>Property Access [ ]</li>
+
+![''](https://github.com/user-attachments/assets/e1651ed5-5b7a-4f69-bde0-6b5ea84e24a2)
+
 <li>substring()</li>
 <li>substr()</li>
 </ul>
