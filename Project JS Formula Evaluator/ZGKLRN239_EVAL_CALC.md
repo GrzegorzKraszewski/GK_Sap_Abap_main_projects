@@ -208,9 +208,11 @@ DATA:lv_line_edit_sub  TYPE i.
 <li> logical or ( || ) </li>
 <li> logical not ( ! ) </li>
 </ul>
+<br>
 
 <h3>JS Math Object</h3>
 
+<br>
 </ul>
 <li>min</li>
 <li>max</li>
