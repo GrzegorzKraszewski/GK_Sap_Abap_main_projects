@@ -206,6 +206,11 @@ DATA:lv_line_edit_sub  TYPE i.
 <li> logical or ( || ) </li>
 <li> logical not ( ! ) </li>
 
+<br>
+<h3>String methods</h3>
+<li>length</li>
+
+
 <br><br>
 <h3>More compleks formula</h3>
 
