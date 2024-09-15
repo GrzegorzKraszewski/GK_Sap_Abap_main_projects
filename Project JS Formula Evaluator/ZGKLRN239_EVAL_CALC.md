@@ -202,9 +202,9 @@ DATA:lv_line_edit_sub  TYPE i.
 <li> less than ( < ) </li>
 <li> greater than or equal to ( >= ) </li>
 <li> less than or equal to ( <= ) </li>
-<li> logical and ( && ) </li
-<li> logical or ( || ) </li
-<li> logical not ( ! ) </li
+<li> logical and ( && ) </li>
+<li> logical or ( || ) </li>
+<li> logical not ( ! ) </li>
 
 <br><br>
 <h3>More compleks formula</h3>
