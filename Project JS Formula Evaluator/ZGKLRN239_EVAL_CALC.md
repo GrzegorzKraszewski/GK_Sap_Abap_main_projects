@@ -209,6 +209,20 @@ DATA:lv_line_edit_sub  TYPE i.
 <li> logical not ( ! ) </li>
 </ul>
 
+<h3>JS Math Object</h3>
+
+</ul>
+<li>min</li>
+<li>max</li>
+<li>pow</li>
+<li>round</li>
+<li>ceil</li>
+<li>floor</li>
+<li>abs</li>
+<li>sqrt</li>
+<li>random</li>
+</ul>
+
 
 <br>
 <h3>String methods</h3>
