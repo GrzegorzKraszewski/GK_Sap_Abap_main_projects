@@ -219,7 +219,8 @@ DATA:lv_line_edit_sub  TYPE i.
 <li>substring()</li>
 <li>substr()</li>
 </ul>
-
+<br>
+Examples:
 !['' lenght](https://github.com/user-attachments/assets/8683c0df-e4d5-4899-aa2b-203664b64409)
 !['' charAt()](https://github.com/user-attachments/assets/3acd268a-488e-4254-a992-8ac56be25951)
 
