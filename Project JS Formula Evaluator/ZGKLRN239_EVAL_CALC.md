@@ -225,11 +225,12 @@ DATA:lv_line_edit_sub  TYPE i.
 
 ![''](https://github.com/user-attachments/assets/e1651ed5-5b7a-4f69-bde0-6b5ea84e24a2)
 
+![''  to get last char](https://github.com/user-attachments/assets/ecedbb0e-3dcd-4d5f-8218-1b04cb74bb2a)
+
 <li>substring()</li>
 
 !['' substring( , )](https://github.com/user-attachments/assets/a9424bc0-c49f-4c06-9dca-f82d96962c47)
 
-![''  to get last char](https://github.com/user-attachments/assets/ecedbb0e-3dcd-4d5f-8218-1b04cb74bb2a)
 
 <li>substr()</li>
 
