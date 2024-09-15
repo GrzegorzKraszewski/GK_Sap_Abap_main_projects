@@ -235,6 +235,9 @@ DATA:lv_line_edit_sub  TYPE i.
 <li>ceil</li>
 <li>floor</li>
 <li>abs</li>
+
+![Math abs](https://github.com/user-attachments/assets/305be8d1-f55c-47f6-80f1-438a9413e306)
+
 <li>sqrt</li>
 <li>random</li>
 </ul>
