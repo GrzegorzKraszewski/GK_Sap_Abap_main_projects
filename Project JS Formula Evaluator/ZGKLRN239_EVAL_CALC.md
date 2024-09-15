@@ -194,7 +194,7 @@ DATA:lv_line_edit_sub  TYPE i.
 </ol>
 
 <br>
-<h3>Comparison and Logical Operators</h3>
+<h3>JS Comparison and Logical Operators</h3>
 
 <li>equal to ( == ) </li>
 <li>not equal ( != ) </li>
