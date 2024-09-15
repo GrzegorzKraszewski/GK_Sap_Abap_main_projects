@@ -168,7 +168,7 @@ DATA:lv_line_edit_sub  TYPE i.
 <br><br>   
 
 <h3>explanation</h3>
-<p>We can see some comparison to Excel formulas </p>
+
 
 <h3>JS Operators</h3>
 
