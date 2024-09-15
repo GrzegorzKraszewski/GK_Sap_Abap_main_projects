@@ -265,6 +265,11 @@ DATA:lv_line_edit_sub  TYPE i.
 <br><br>
 <h3>More compleks formula</h3>
 
+<br>
+<p>Sources for JS Code :</p>
+<p>https://www.w3schools.com/js/</p>
+
+
 
 
 
