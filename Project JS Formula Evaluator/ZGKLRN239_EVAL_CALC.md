@@ -237,12 +237,22 @@ DATA:lv_line_edit_sub  TYPE i.
 ![Math ceil](https://github.com/user-attachments/assets/31580cf6-9623-4c4f-97a0-3d4750885cdd)
 
 <li>floor</li>
+
+![Math floor](https://github.com/user-attachments/assets/2a429f2b-ef6a-4a53-bc43-24bea927a2f7)
+
 <li>abs</li>
 
 ![Math abs](https://github.com/user-attachments/assets/305be8d1-f55c-47f6-80f1-438a9413e306)
 
 <li>sqrt</li>
 <li>random</li>
+
+![Math random](https://github.com/user-attachments/assets/a4a46343-c2a7-4672-b03c-df7ca6d8ce1f)
+
+<li>PI</li>
+
+![Math PI](https://github.com/user-attachments/assets/e9050ecb-c0c5-4bd8-b333-785134944f95)
+
 </ul>
 
 
