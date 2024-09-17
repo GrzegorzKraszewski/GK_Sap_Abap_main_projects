@@ -312,6 +312,9 @@ DATA:lv_line_edit_sub  TYPE i.
 </ul>
 <li>if</li>
 eval("if ( condition ) { true; } else { false; }")
+
+![if](https://github.com/user-attachments/assets/aa853218-2dae-4f04-b330-c461fae60688)
+
 </ul>
 <br><br>
 <h3>More compleks formula</h3>
