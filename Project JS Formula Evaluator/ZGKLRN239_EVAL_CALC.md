@@ -308,7 +308,11 @@ DATA:lv_line_edit_sub  TYPE i.
 </ul>
 
 <h3>Conditional Statements - if, else, else if</h3>
-
+<o> To use them the source code must be embedded in eval(" ")</o>
+</ul>
+<li>if</li>
+eval("if ( condition ) { true; } else { false; }")
+</ul>
 <br><br>
 <h3>More compleks formula</h3>
 
