@@ -233,6 +233,9 @@ DATA:lv_line_edit_sub  TYPE i.
 ![Math Round](https://github.com/user-attachments/assets/6af4fecf-9df2-4fef-9dc2-831e90e2ea86)
 
 <li>ceil</li>
+
+![Math ceil](https://github.com/user-attachments/assets/31580cf6-9623-4c4f-97a0-3d4750885cdd)
+
 <li>floor</li>
 <li>abs</li>
 
