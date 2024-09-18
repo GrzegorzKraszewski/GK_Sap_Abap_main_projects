@@ -327,6 +327,8 @@ eval("if ( 2>5 ) { 1; } else {if ( 2<5 ) { true; } else { false; }; }")
 
 ![ifelseex1](https://github.com/user-attachments/assets/11b7b621-a2b3-4309-ad76-a8db827575ab)
 
+<li>with conditional operators</li>
+
 </ul>
 <br><br>
 <h3>More compleks formula</h3>
