@@ -311,6 +311,13 @@ DATA:lv_line_edit_sub  TYPE i.
 <o> To use them the source code must be embedded in eval(" ")</o>
 </ul>
 <li>if</li>
+
+eval("if ( condition ) { true; } ")
+
+![ifonly](https://github.com/user-attachments/assets/5a6525cc-6099-4b55-9154-41ecacc5cc12)
+
+<li>else if</li>
+
 eval("if ( condition ) { true; } else { false; }")
 
 ![if](https://github.com/user-attachments/assets/aa853218-2dae-4f04-b330-c461fae60688)
