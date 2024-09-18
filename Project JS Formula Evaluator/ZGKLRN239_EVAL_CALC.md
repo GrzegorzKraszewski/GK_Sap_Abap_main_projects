@@ -316,7 +316,7 @@ eval("if ( condition ) { true; } ")
 
 ![ifonly](https://github.com/user-attachments/assets/5a6525cc-6099-4b55-9154-41ecacc5cc12)
 
-<li>else if</li>
+<li>else</li>
 
 eval("if ( condition ) { true; } else { false; }")
 
