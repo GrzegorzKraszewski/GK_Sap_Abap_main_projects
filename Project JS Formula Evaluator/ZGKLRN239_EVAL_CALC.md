@@ -366,6 +366,11 @@ eval("if ( cond1 || cond2 ) { true; } else { false; }")
 
 </ul>
 <br><br>
+
+<h3>Parse Float</h3>
+<h3>Date</h3>
+
+<br><br>
 <h3>More compleks formula</h3>
 
 <br>
