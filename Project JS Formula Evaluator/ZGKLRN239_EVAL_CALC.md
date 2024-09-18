@@ -270,7 +270,11 @@ DATA:lv_line_edit_sub  TYPE i.
 
 <li>Property Access [ ]</li>
 
+First sign
+
 ![''](https://github.com/user-attachments/assets/e1651ed5-5b7a-4f69-bde0-6b5ea84e24a2)
+
+Last sign
 
 ![''  to get last char](https://github.com/user-attachments/assets/ecedbb0e-3dcd-4d5f-8218-1b04cb74bb2a)
 
