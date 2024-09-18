@@ -223,6 +223,10 @@ DATA:lv_line_edit_sub  TYPE i.
 
 <h3>Booleans</h3>
 
+![booleanex1](https://github.com/user-attachments/assets/9a79b81a-8173-49ad-b31a-a845490948fc)
+
+![booleanex2](https://github.com/user-attachments/assets/17324229-3d25-4a0b-ae6f-de09ee787012)
+
 <br>
 <h3>JS Math Object</h3>
 
