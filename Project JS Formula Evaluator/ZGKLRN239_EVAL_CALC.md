@@ -332,7 +332,9 @@ eval("if ( condition ) { true; } else {if ( condition ) { true; } else { false; 
 if with logical and ( && )
 ![if ex1](https://github.com/user-attachments/assets/c8b68fe6-8ac2-43b6-8e5b-c9b4fd477f3e)
 
+if with ogical or ( || )
 
+![IForex1](https://github.com/user-attachments/assets/4fcb55ec-1898-47f0-a72b-0f237a65a232)
 
 </ul>
 <br><br>
