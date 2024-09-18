@@ -209,6 +209,9 @@ DATA:lv_line_edit_sub  TYPE i.
 <li> logical and ( && ) </li>
 <li> logical or ( || ) </li>
 <li> logical not ( ! ) </li>
+
+![NOTEXAMPLE](https://github.com/user-attachments/assets/beb3165a-3bbf-42ef-b6e5-d442703266f9)
+       
 </ul>
 <br>
 
