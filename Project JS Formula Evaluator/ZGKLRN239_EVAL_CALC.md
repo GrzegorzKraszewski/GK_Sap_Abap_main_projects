@@ -329,6 +329,8 @@ eval("if ( condition ) { true; } else {if ( condition ) { true; } else { false; 
 
 <li>with logical operators</li>
 
+![if ex1](https://github.com/user-attachments/assets/c8b68fe6-8ac2-43b6-8e5b-c9b4fd477f3e)
+
 </ul>
 <br><br>
 <h3>More compleks formula</h3>
