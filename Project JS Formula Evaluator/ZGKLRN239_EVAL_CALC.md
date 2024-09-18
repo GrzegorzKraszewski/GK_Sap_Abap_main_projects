@@ -221,6 +221,9 @@ DATA:lv_line_edit_sub  TYPE i.
 </ul>
 <br>
 
+<h3>Booleans</h3>
+
+<br>
 <h3>JS Math Object</h3>
 
 <br>
@@ -254,6 +257,9 @@ DATA:lv_line_edit_sub  TYPE i.
 ![Math abs](https://github.com/user-attachments/assets/305be8d1-f55c-47f6-80f1-438a9413e306)
 
 <li>sqrt</li>
+
+![math sqrt](https://github.com/user-attachments/assets/80433325-f18e-44d6-9152-1f708608f63d)
+
 <li>random</li>
 
 ![Math random](https://github.com/user-attachments/assets/a4a46343-c2a7-4672-b03c-df7ca6d8ce1f)
