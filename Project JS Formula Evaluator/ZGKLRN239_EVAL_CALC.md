@@ -172,6 +172,7 @@ DATA:lv_line_edit_sub  TYPE i.
 <h3>explanation</h3>
 
 <h3>What we can do/what we can use in program operators methods etc.</h3>
+<h3>Useful and supported operators methods</h3>
 
 <h3>JS Operators</h3>
 
