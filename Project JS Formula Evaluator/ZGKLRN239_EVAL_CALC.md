@@ -347,6 +347,13 @@ eval("if ( condition ) { true; } else { false; }")
 ![if](https://github.com/user-attachments/assets/aa853218-2dae-4f04-b330-c461fae60688)
 
 <li>else if</li>
+
+eval("if ( condition ) { true; } else if ( condition2 ) { true; } else { ; } ")
+
+![elseif21](https://github.com/user-attachments/assets/fd9a7a36-8e5c-47c3-a5ec-2d607133f85d)
+
+or we can use
+
 eval("if ( condition ) { true; } else {if ( condition ) { true; } else { false; }; }")
 
 ![ifelseex1](https://github.com/user-attachments/assets/11b7b621-a2b3-4309-ad76-a8db827575ab)
