@@ -376,6 +376,9 @@ eval("if ( cond1 || cond2 ) { true; } else { false; }")
 <br><br>
 
 <h3>ParseFloat</h3>
+
+![parsefloat](https://github.com/user-attachments/assets/aec3f2bd-d020-467c-9261-844c27c4258e)
+
 <h3>Date</h3>
 
 <br><br>
