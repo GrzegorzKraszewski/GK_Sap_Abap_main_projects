@@ -381,6 +381,17 @@ eval("if ( cond1 || cond2 ) { true; } else { false; }")
 ![parsefloat](https://github.com/user-attachments/assets/aec3f2bd-d020-467c-9261-844c27c4258e)
 
 <h3>Date</h3>
+<br>
+</ul>
+<li>new Date() - cunnrent date and time </li>
+
+![new Date()](https://github.com/user-attachments/assets/f70b702c-8701-4236-9518-8b77126837b3)
+
+</ul>
+
+
+
+
 
 <br><br>
 <h3>More compleks formula</h3>
