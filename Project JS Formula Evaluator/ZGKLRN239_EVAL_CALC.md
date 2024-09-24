@@ -392,6 +392,8 @@ eval("if ( cond1 || cond2 ) { true; } else { false; }")
 
 ![new DateSeptember 24 2024 215400](https://github.com/user-attachments/assets/a4d5a1c3-25ea-4a02-8a3b-b5013cdc61f0)
 
+![new date( sep 24 2024)](https://github.com/user-attachments/assets/f8e8c88c-0e6c-4cec-9a1c-d799fae9a15c)
+
 
 <li>new Date(year, month, ...) - 7 numbers in that order specify year, month, day, hour, minute, second, and millisecond </li>
 
