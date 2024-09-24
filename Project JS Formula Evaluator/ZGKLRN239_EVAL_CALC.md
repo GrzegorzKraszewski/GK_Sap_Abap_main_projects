@@ -387,6 +387,16 @@ eval("if ( cond1 || cond2 ) { true; } else { false; }")
 
 ![new Date()](https://github.com/user-attachments/assets/f70b702c-8701-4236-9518-8b77126837b3)
 
+
+<li>new Date(date string)</li>
+
+![new DateSeptember 24 2024 215400](https://github.com/user-attachments/assets/a4d5a1c3-25ea-4a02-8a3b-b5013cdc61f0)
+
+
+<li>new Date(year, month, ...) - 7 numbers in that order specify year, month, day, hour, minute, second, and millisecond </li>
+
+![new Date(year,month, )](https://github.com/user-attachments/assets/b7b6732c-eee5-42e7-bf7b-2dc368c8d5db)
+
 </ul>
 
 
