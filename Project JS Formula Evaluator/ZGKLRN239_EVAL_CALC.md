@@ -392,12 +392,17 @@ eval("if ( cond1 || cond2 ) { true; } else { false; }")
 
 ![new DateSeptember 24 2024 215400](https://github.com/user-attachments/assets/a4d5a1c3-25ea-4a02-8a3b-b5013cdc61f0)
 
-![new date( sep 24 2024)](https://github.com/user-attachments/assets/f8e8c88c-0e6c-4cec-9a1c-d799fae9a15c)
-
-
 <li>new Date(year, month, ...) - 7 numbers in that order specify year, month, day, hour, minute, second, and millisecond </li>
 
 ![new Date(year,month, )](https://github.com/user-attachments/assets/b7b6732c-eee5-42e7-bf7b-2dc368c8d5db)
+
+<li>Short Date</li>
+
+![new date (short)](https://github.com/user-attachments/assets/c8caeea7-01c9-4603-8d57-71f46df86cc9)
+
+<li>Long Date</li>
+
+![new date( sep 24 2024)](https://github.com/user-attachments/assets/f8e8c88c-0e6c-4cec-9a1c-d799fae9a15c)
 
 </ul>
 
