@@ -404,6 +404,45 @@ eval("if ( cond1 || cond2 ) { true; } else { false; }")
 
 ![new date( sep 24 2024)](https://github.com/user-attachments/assets/f8e8c88c-0e6c-4cec-9a1c-d799fae9a15c)
 
+
+<li>getFullYear() - year(yyyy)</li>
+
+![getfullyear](https://github.com/user-attachments/assets/11e7418f-f9b1-4825-893a-1fe21caf6bcb)
+
+<li>getMonth() - month(0-11)</li>
+
+
+<li>getDate() - day(1-31)</li>
+
+
+
+<li>getDay() - weekday(1-31)</li>
+
+
+
+<li>getHours() - hour(0-23)</li>
+
+
+
+<li>getMinutes() - minute(0-59)</li>
+
+
+
+<li>getSeconds() - second(0-59)</li>
+
+
+
+<li>getSeconds() - second(0-59)</li>
+
+
+<li>getMilliseconds() - millisecond(0-999)</li>
+
+
+
+<li>getTime() - time(milliseconds since January 1, 1970)</li>
+
+
+
 </ul>
 
 
