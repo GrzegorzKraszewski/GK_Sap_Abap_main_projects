@@ -398,7 +398,7 @@ eval("if ( cond1 || cond2 ) { true; } else { false; }")
 
 <li>Short Date</li>
 
-![new date (short)](https://github.com/user-attachments/assets/c8caeea7-01c9-4603-8d57-71f46df86cc9)
+![short](https://github.com/user-attachments/assets/e5b354c1-9271-4e09-939e-c550391ae0a8)
 
 <li>Long Date</li>
 
