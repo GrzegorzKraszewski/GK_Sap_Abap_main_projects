@@ -411,37 +411,36 @@ eval("if ( cond1 || cond2 ) { true; } else { false; }")
 
 <li>getMonth() - month(0-11)</li>
 
+![getMonth()](https://github.com/user-attachments/assets/2fbf8e24-9cbf-4763-b3b9-2c5883019280)
 
 <li>getDate() - day(1-31)</li>
 
-
+![getDate()](https://github.com/user-attachments/assets/7f98a16a-9042-4f9e-9c43-0a1573abb7c5)
 
 <li>getDay() - weekday(1-31)</li>
 
-
+![getDay()](https://github.com/user-attachments/assets/09c04980-ccf7-4c0f-a775-65dff4fb3d96)
 
 <li>getHours() - hour(0-23)</li>
 
-
+![getHours()](https://github.com/user-attachments/assets/87eb31ae-41b9-4119-9e7b-9ccda91ad910)
 
 <li>getMinutes() - minute(0-59)</li>
 
-
-
-<li>getSeconds() - second(0-59)</li>
-
-
+![getMinutes()](https://github.com/user-attachments/assets/a954fb7b-19e0-4495-83c8-24c8e336381e)
 
 <li>getSeconds() - second(0-59)</li>
+
+![getSeconds()](https://github.com/user-attachments/assets/3445e59d-3bc3-4cca-9d57-8be2c4ea6e15)
 
 
 <li>getMilliseconds() - millisecond(0-999)</li>
 
-
+![getMilliseconds()](https://github.com/user-attachments/assets/c0b3ded2-b04c-47cf-92da-78ece11cf11f)
 
 <li>getTime() - time(milliseconds since January 1, 1970)</li>
 
-
+![getTime()](https://github.com/user-attachments/assets/cd60f733-f0ba-4f9e-a64e-9f4bbd032c4b)
 
 </ul>
 
