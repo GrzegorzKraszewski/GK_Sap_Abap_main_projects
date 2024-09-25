@@ -203,9 +203,21 @@ DATA:lv_line_edit_sub  TYPE i.
 <h3>JS Comparison and Logical Operators</h3>
 </ul>
 <li>equal to ( == ) </li>
+
+![equal to](https://github.com/user-attachments/assets/b703dc46-6e6f-4523-b002-fd6a070c2590)
+
 <li>not equal ( != ) </li>
+
+![not equal](https://github.com/user-attachments/assets/5495810f-2a62-4d8a-81cc-9ba89ce19f39)
+
 <li> greater than ( > ) </li>
+
+![greater than](https://github.com/user-attachments/assets/a57c16fa-c7ec-4ef1-9f18-95891a1264cb)
+
 <li> less than ( < ) </li>
+
+![less than](https://github.com/user-attachments/assets/fc709394-9d83-4c93-abc1-e127f2e2afcc)
+       
 <li> greater than or equal to ( >= ) </li>
 
 ![greater than or equal to](https://github.com/user-attachments/assets/d183730e-5d73-4d8b-937e-a6e03acefcd6)
