@@ -183,10 +183,25 @@ DATA:lv_line_edit_sub  TYPE i.
 <br>
 <ul>
 <li>Addition ( + ) </li>
+
+![addition](https://github.com/user-attachments/assets/2cee3804-13eb-4153-bb0f-966324e2b137)
+       
 <li>Subtraction ( - ) </li>
+
+![subtraction](https://github.com/user-attachments/assets/cf0bae41-63c9-4d81-a681-9daf5791e85e)
+
 <li>Multiplication ( * ) </li>
+
+![multiplication](https://github.com/user-attachments/assets/6cec5b57-390a-4a8f-8d9a-1fbc5472340a)
+
 <li>Division ( / ) </li> 
+
+![Division](https://github.com/user-attachments/assets/4cfa5ba5-ab9d-4920-89ac-849caddf3e5f)
+
 <li>Modulus ( % ) </li>
+
+![modulus](https://github.com/user-attachments/assets/a4ae5fbc-2675-4ce6-9ef6-65561a0a31cd)
+
 </ul>
 <br>
 <li>Not supported</li>
