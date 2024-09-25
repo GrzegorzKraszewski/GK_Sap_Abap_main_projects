@@ -49,10 +49,6 @@ INCLUDE zgklrn239_eval_calc_pai1_1.
 
 
 ```console
-*&---------------------------------------------------------------------*
-*& Include          ZGKLRN239_EVAL_CALC_TOP_1
-*&---------------------------------------------------------------------*
-
 
 TYPE-POOLS : vrm.
 
@@ -163,6 +159,51 @@ DATA : lv_zmienne_id TYPE vrm_id,
 <p>*&---------------------------------------------------------------------*</p><h5 id="d01"><a href="#d011b">INCLUDE zgklrn239_eval_calc_d01_1</a></h5>
  <a href="#d011b">Back to main includes</a> <br>
 *&---------------------------------------------------------------------* <br><br> <br><br> 
+
+```console
+
+CLASS lcl_main DEFINITION.
+
+  PUBLIC SECTION.
+
+    CLASS-METHODS:
+      get_dat_form,
+      screen_100,
+      pbo,
+      pai,
+      create_containers_txt,
+      fill_tab_text,
+      fill_structure,
+      save_entrie,
+      delete_entrie,
+      clear_entrie,
+      clear_result,
+      pop_up_save,
+      pop_up_save_exist,
+      pop_up_delete,
+      pop_up_exist_indb,
+      fill_struct_exist,
+      vrm_variables,
+      get_matnr_data,
+      macros_variables,
+      evaluator,
+      set_variables,
+      set_functions,
+      set_operators,
+      set_display_text,
+      set_change_text,
+      check_exist,
+      check_set_exist.
+
+
+ENDCLASS.
+
+
+
+
+```
+
+
 
 <h5 id="usage"> <a href="#usageb">Back top</a></h5>
 <h2>Usage/behavior of program : </h2>  
