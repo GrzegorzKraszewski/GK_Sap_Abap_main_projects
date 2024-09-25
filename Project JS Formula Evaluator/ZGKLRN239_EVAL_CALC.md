@@ -246,8 +246,46 @@ START-OF-SELECTION.
 
 
 ```
+<p>*&---------------------------------------------------------------------*</p><h5 id="pbo1"><a href="#pbo11b">INCLUDE zgklrn239_eval_calc_pbo1_1</a></h5>
+ <a href="#d011b">Back to main includes</a> <br>
+*&---------------------------------------------------------------------* <br><br> <br><br> 
 
+```console
+*&---------------------------------------------------------------------*
+*&      Module  STATUS_0100  OUTPUT
+*&---------------------------------------------------------------------*
+*       text
+*----------------------------------------------------------------------*
+MODULE status_0100 OUTPUT.
+  SET PF-STATUS '0100'.
+  SET TITLEBAR '0100'.
 
+  lcl_main=>pbo( ).
+
+ENDMODULE.
+```
+<p>*&---------------------------------------------------------------------*</p><h5 id="pbo2"><a href="#pbo21b">INCLUDE zgklrn239_eval_calc_pbo2_1</a></h5>
+ <a href="#d011b">Back to main includes</a> <br>
+*&---------------------------------------------------------------------* <br><br> <br><br> 
+
+```console
+MODULE list_fill_100 OUTPUT.
+  lcl_main=>vrm_variables( ).
+ENDMODULE.
+```
+<p>*&---------------------------------------------------------------------*</p><h5 id="pai1"><a href="#pai11b">INCLUDE zgklrn239_eval_calc_pai1_1</a></h5>
+ <a href="#d011b">Back to main includes</a> <br>
+*&---------------------------------------------------------------------* <br><br> <br><br> 
+
+```console
+
+MODULE user_command_0100 INPUT.
+
+  lcl_main=>pai( ).
+
+ENDMODULE.
+
+```
 
 <h5 id="usage"> <a href="#usageb">Back top</a></h5>
 <h2>Usage/behavior of program : </h2>  
