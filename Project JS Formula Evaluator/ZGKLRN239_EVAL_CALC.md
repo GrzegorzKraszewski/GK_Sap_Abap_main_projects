@@ -94,36 +94,36 @@ DATA : lv_zmienne_id TYPE vrm_id,
        lv_value3        LIKE LINE OF lv_values,
 
 
-      ls_main       TYPE ty_main,
-      ls_save       TYPE zformula_tab,
-      ls_delete     TYPE zformula_tab,
-      ls_exist      TYPE zformula_tab,
+       ls_main       TYPE ty_main,
+       ls_save       TYPE zformula_tab,
+       ls_delete     TYPE zformula_tab,
+       ls_exist      TYPE zformula_tab,
 
-      lv_flag_exist TYPE char1,
+       lv_flag_exist TYPE char1,
 
 
       ok_code     TYPE sy-ucomm,
       lr_container TYPE REF TO cl_gui_custom_container,
       lr_editor    TYPE REF TO cl_gui_textedit,
 
-     matnr_in   TYPE mara-matnr,
-     len_in     TYPE mara-laeng,
-     wid_in     TYPE mara-breit,
-     hei_in     TYPE mara-hoehe,
-     result_out TYPE char200,
-     formula_name TYPE char10,
+      matnr_in   TYPE mara-matnr,
+      len_in     TYPE mara-laeng,
+      wid_in     TYPE mara-breit,
+      hei_in     TYPE mara-hoehe,
+      result_out TYPE char200,
+      formula_name TYPE char10,
 
 
-     lv_from_line     TYPE i,
-     lv_from_pos      TYPE i,
-     lv_to_line       TYPE i,
-     lv_to_pos        TYPE i,
-     lv_string_lengh  TYPE i,
-     lv_string_sub    TYPE i,
-     lv_string_part1  TYPE string,
-     lv_string_part2  TYPE string,
-     lv_str_main_part TYPE string,
-     lv_real_position TYPE i,
+      lv_from_line     TYPE i,
+      lv_from_pos      TYPE i,
+      lv_to_line       TYPE i,
+      lv_to_pos        TYPE i,
+      lv_string_lengh  TYPE i,
+      lv_string_sub    TYPE i,
+      lv_string_part1  TYPE string,
+      lv_string_part2  TYPE string,
+      lv_str_main_part TYPE string,
+      lv_real_position TYPE i,
 
 
       lv_str_main  TYPE string,
@@ -136,11 +136,11 @@ DATA : lv_zmienne_id TYPE vrm_id,
       ls_t_text_set2 TYPE ty_text_set2,
 
 
-       lt_t_text             TYPE TABLE OF char200,
-       ls_t_text              TYPE char200,
-       lt_t_text2             TYPE STANDARD TABLE OF ty_text_from_edit,
-       lv_string_formula      TYPE string,
-       lv_string_formula_main TYPE string,
+      lt_t_text             TYPE TABLE OF char200,
+      ls_t_text              TYPE char200,
+      lt_t_text2             TYPE STANDARD TABLE OF ty_text_from_edit,
+      lv_string_formula      TYPE string,
+      lv_string_formula_main TYPE string,
 
 
       lv_pierwsz TYPE char1,
@@ -155,7 +155,7 @@ DATA : lv_zmienne_id TYPE vrm_id,
       lv_line_edit_sub  TYPE i.
 
 
-            .
+            
 
 ```
 
