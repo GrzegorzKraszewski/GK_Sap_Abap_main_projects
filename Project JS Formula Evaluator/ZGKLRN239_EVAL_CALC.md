@@ -183,7 +183,6 @@ CLASS lcl_main DEFINITION.
       pop_up_save,
       pop_up_save_exist,
       pop_up_delete,
-      pop_up_exist_indb,
       fill_struct_exist,
       vrm_variables,
       get_matnr_data,
