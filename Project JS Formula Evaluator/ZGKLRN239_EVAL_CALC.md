@@ -170,7 +170,6 @@ CLASS lcl_main DEFINITION.
   PUBLIC SECTION.
 
     CLASS-METHODS:
-      get_dat_form,
       screen_100,
       pbo,
       pai,
