@@ -49,7 +49,37 @@ INCLUDE zgklrn239_eval_calc_pai1_1.
 
 
 ```console
+*&---------------------------------------------------------------------*
+*& Include          ZGKLRN239_EVAL_CALC_TOP_1
+*&---------------------------------------------------------------------*
+
+
 TYPE-POOLS : vrm.
+
+TYPES: BEGIN OF ty_main,
+         formula    TYPE string,
+         matnr      TYPE mara-matnr,
+         laeng      TYPE mara-laeng,
+         breit      TYPE mara-breit,
+         hoehe      TYPE mara-hoehe,
+         result_out TYPE char11,
+       END OF   ty_main.
+
+TYPES: BEGIN OF ty_read_val,
+         key  TYPE char40,
+         text TYPE char80,
+       END OF ty_read_val.
+
+TYPES: BEGIN OF ty_text_set2,
+         text TYPE string,
+       END OF  ty_text_set2.
+
+
+TYPES: BEGIN OF ty_text_from_edit,
+         line TYPE i,
+         text TYPE char200,
+       END OF ty_text_from_edit.
+
 
 DATA : lv_zmienne_id TYPE vrm_id,
        lv_values        TYPE vrm_values,
@@ -61,102 +91,71 @@ DATA : lv_zmienne_id TYPE vrm_id,
 
        lv_operators_id   TYPE vrm_id,
        lv_values3       TYPE vrm_values,
-       lv_value3        LIKE LINE OF lv_values.
+       lv_value3        LIKE LINE OF lv_values,
 
 
+      ls_main       TYPE ty_main,
+      ls_save       TYPE zformula_tab,
+      ls_delete     TYPE zformula_tab,
+      ls_exist      TYPE zformula_tab,
 
-TYPES: BEGIN OF ty_main,reg,
-         formula    TYPE string,
-         matnr      TYPE mara-matnr,
-         laeng      TYPE mara-laeng,
-         breit      TYPE mara-breit,
-         hoehe      TYPE mara-hoehe,
-         result_out TYPE char11,
-       END OF   ty_main.
+      lv_flag_exist TYPE char1,
 
 
-DATA: ls_main       TYPE ty_main,
-*      ls_save       TYPE , "tabela w której będą zapisywane dane
-*      ls_delete     TYPE , "tabela w której będą zapisywane dane
-*      ls_exist      TYPE , "tabela w której będą zapisywane dane
+      ok_code     TYPE sy-ucomm,
+      lr_container TYPE REF TO cl_gui_custom_container,
+      lr_editor    TYPE REF TO cl_gui_textedit,
 
-      lv_flag_exist TYPE char1.
-
-
-
-DATA: ok_code     TYPE sy-ucomm,
-      lr_container TYPE REF TO cl_gui_custom_container, "g_container
-      lr_editor    TYPE REF TO cl_gui_textedit. "g_editor
+     matnr_in   TYPE mara-matnr,
+     len_in     TYPE mara-laeng,
+     wid_in     TYPE mara-breit,
+     hei_in     TYPE mara-hoehe,
+     result_out TYPE char200,
+     formula_name TYPE char10,
 
 
-DATA:
-  matnr_in   TYPE mara-matnr,
-  len_in     TYPE mara-laeng,
-  wid_in     TYPE mara-breit,
-  hei_in     TYPE mara-hoehe,
-  result_out TYPE char11.
+     lv_from_line     TYPE i,
+     lv_from_pos      TYPE i,
+     lv_to_line       TYPE i,
+     lv_to_pos        TYPE i,
+     lv_string_lengh  TYPE i,
+     lv_string_sub    TYPE i,
+     lv_string_part1  TYPE string,
+     lv_string_part2  TYPE string,
+     lv_str_main_part TYPE string,
+     lv_real_position TYPE i,
 
 
-DATA:
-  lv_from_line     TYPE i,
-  lv_from_pos      TYPE i,
-  lv_to_line       TYPE i,
-  lv_to_pos        TYPE i,
-  lv_string_lengh  TYPE i,
-  lv_string_sub    TYPE i,
-  lv_string_part1  TYPE string,
-  lv_string_part2  TYPE string,
-  lv_str_main_part TYPE string,
-  lv_real_position TYPE i.
-
-
-
-DATA: lv_str_main  TYPE string,
+      lv_str_main  TYPE string,
       lv_str       TYPE string,
-      lt_split_tab TYPE TABLE OF string.
+      lt_split_tab TYPE TABLE OF string,
+
+      ls_read_values TYPE ty_read_val,
+
+      lt_t_text_set2 TYPE TABLE OF ty_text_set2,
+      ls_t_text_set2 TYPE ty_text_set2,
 
 
-TYPES: BEGIN OF ty_read_val,
-         key  TYPE char40,
-         text TYPE char80,
-       END OF ty_read_val.
-
-
-
-DATA: ls_read_values TYPE ty_read_val.
-
-
-TYPES: BEGIN OF ty_text_set2,
-         text TYPE string,
-       END OF  ty_text_set2.
-
-DATA: lt_t_text_set2 TYPE TABLE OF ty_text_set2,
-      ls_t_text_set2 TYPE ty_text_set2.
-
-
-TYPES: BEGIN OF ty_text_from_edit,
-         line TYPE i,
-         text TYPE char200,
-       END OF ty_text_from_edit.
-
-DATA : lt_t_text              TYPE TABLE OF char200,
+       lt_t_text             TYPE TABLE OF char200,
        ls_t_text              TYPE char200,
        lt_t_text2             TYPE STANDARD TABLE OF ty_text_from_edit,
        lv_string_formula      TYPE string,
-       lv_string_formula_main TYPE string.
+       lv_string_formula_main TYPE string,
 
 
-DATA: lv_pierwsz TYPE char1,
-      gv_flag(1).
+      lv_pierwsz TYPE char1,
+      gv_flag(1),
 
-DATA: gv_reminder TYPE i.
-DATA: gv_evenodd TYPE i.
+      gv_reminder TYPE i,
+      gv_evenodd TYPE i,
+
+      lv_spac  TYPE char1 VALUE '#',
+      lv_spaces  TYPE string,
+      lv_line_edit_len  TYPE i,
+      lv_line_edit_sub  TYPE i.
 
 
-DATA:lv_spac  TYPE char1 VALUE '#'.
-DATA:lv_spaces  TYPE string.
-DATA:lv_line_edit_len  TYPE i.
-DATA:lv_line_edit_sub  TYPE i.
+            .
 
 ```
 
