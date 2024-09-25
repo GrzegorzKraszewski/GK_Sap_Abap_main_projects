@@ -207,7 +207,13 @@ DATA:lv_line_edit_sub  TYPE i.
 <li> greater than ( > ) </li>
 <li> less than ( < ) </li>
 <li> greater than or equal to ( >= ) </li>
+
+![greater than or equal to](https://github.com/user-attachments/assets/d183730e-5d73-4d8b-937e-a6e03acefcd6)
+       
 <li> less than or equal to ( <= ) </li>
+
+![less than or equal to](https://github.com/user-attachments/assets/2fb790b3-b26c-447c-aab2-be7b941d70bb)
+       
 <li> logical and ( && ) </li>
 
 ![ANDEXAMPLE](https://github.com/user-attachments/assets/f5a9377b-7670-44ec-9594-769616b64340)
