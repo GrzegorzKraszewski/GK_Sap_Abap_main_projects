@@ -160,7 +160,7 @@ DATA : lv_zmienne_id TYPE vrm_id,
 
 
 <p>*&---------------------------------------------------------------------*</p><h5 id="d01"><a href="#d011b">INCLUDE zgklrn239_eval_calc_d01_1</a></h5>
- <a href="#d011b">Back to main includes</a> <br>
+<!--  <a href="#d011b">Back to main includes</a> <br> -->
 *&---------------------------------------------------------------------* <br><br> <br><br> 
 
 ```console
@@ -206,7 +206,7 @@ ENDCLASS.
 
 
 <p>*&---------------------------------------------------------------------*</p><h5 id="i01"><a href="#i011b">INCLUDE zgklrn239_eval_calc_i01_1</a></h5>
- <a href="#d011b">Back to main includes</a> <br>
+ <!--  <a href="#d011b">Back to main includes</a> <br> -->
 *&---------------------------------------------------------------------* <br><br> <br><br> 
 
 ```console
@@ -1551,7 +1551,7 @@ START-OF-SELECTION.
 
 ```
 <p>*&---------------------------------------------------------------------*</p><h5 id="pbo1"><a href="#pbo11b">INCLUDE zgklrn239_eval_calc_pbo1_1</a></h5>
- <a href="#d011b">Back to main includes</a> <br>
+ <!--  <a href="#d011b">Back to main includes</a> <br> -->
 *&---------------------------------------------------------------------* <br><br> <br><br> 
 
 ```console
@@ -1578,7 +1578,7 @@ MODULE list_fill_100 OUTPUT.
 ENDMODULE.
 ```
 <p>*&---------------------------------------------------------------------*</p><h5 id="pai1"><a href="#pai11b">INCLUDE zgklrn239_eval_calc_pai1_1</a></h5>
- <a href="#d011b">Back to main includes</a> <br>
+ <!--  <a href="#d011b">Back to main includes</a> <br> -->
 *&---------------------------------------------------------------------* <br><br> <br><br> 
 
 ```console
