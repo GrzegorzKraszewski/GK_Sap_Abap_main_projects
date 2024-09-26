@@ -1908,7 +1908,7 @@ eval("if ( cond1 || cond2 ) { true; } else { false; }")
 
 
 <br><br>
-<h3>More compleks formula</h3>
+<h3>More compleks formula examples:</h3>
 
 <br>
 <p>Sources for JS Code :</p>
