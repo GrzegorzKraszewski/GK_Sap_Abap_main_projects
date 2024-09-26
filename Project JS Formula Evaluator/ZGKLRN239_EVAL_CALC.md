@@ -221,12 +221,1318 @@ CLASS lcl_main IMPLEMENTATION.
 
     lcl_main=>create_containers_txt( ).
 
-    lcl_main=>get_dat_form( ).
-
     lcl_main=>set_display_text( ).
 
 
   ENDMETHOD.
+
+  METHOD pai.
+
+
+    CASE ok_code.
+      WHEN 'BACK'.
+
+        LEAVE TO SCREEN 0.
+      WHEN 'BUT_4'.
+
+        LEAVE TO SCREEN 0.
+      WHEN 'BUT_8'.
+        lcl_main=>get_matnr_data( ).
+    ENDCASE.
+
+
+
+
+    lcl_main=>fill_structure( ).
+    lcl_main=>fill_tab_text( ).
+
+    CASE ok_code.
+      WHEN 'BUT_3'.
+        lcl_main=>clear_entrie( ).
+        CLEAR ok_code.
+      WHEN 'BUT_1'.
+        lcl_main=>pop_up_save( ).
+        CLEAR ok_code.
+      WHEN 'BUT_5'.
+        lcl_main=>evaluator( ).
+        CLEAR ok_code.
+      WHEN 'BUT_6'. " variables
+        lcl_main=>set_variables( ).
+        CLEAR ok_code.
+      WHEN 'BUT_7'. " fx
+        lcl_main=>set_functions( ).
+        CLEAR ok_code.
+      WHEN 'EDIT'.
+        lcl_main=>set_change_text( ).
+      WHEN 'BUT_10'.
+        lcl_main=>clear_entrie( ).
+      WHEN 'BUT_11'.
+        lcl_main=>clear_result( ).
+       WHEN 'INS_OP'.
+       lcl_main=>set_operators( ).
+       WHEN 'GET_FO'.
+         lcl_main=>check_set_exist( ).
+       WHEN 'DEL'.
+         lcl_main=>pop_up_delete( ).
+
+    ENDCASE.
+
+
+
+  ENDMETHOD.
+
+
+  METHOD create_containers_txt.
+
+    IF lr_editor IS INITIAL.
+
+
+      lr_container = NEW #( container_name = 'G_CUSTOM' ).
+
+
+      lr_editor = NEW #(
+           wordwrap_mode     = 2
+           wordwrap_position = 90
+           parent            = lr_container ).
+
+
+    ENDIF.
+
+
+  ENDMETHOD.
+
+  METHOD fill_tab_text.
+
+
+    CLEAR:  lv_str_main,
+            lv_str,
+            lt_split_tab,
+            lt_t_text.
+
+
+
+
+    lr_editor->get_text_as_r3table(
+      IMPORTING
+        table           = lt_t_text
+      EXCEPTIONS
+        error_dp        = 1
+        error_dp_create = 2
+        OTHERS          = 3 ).
+
+
+
+    IF lt_t_text IS NOT INITIAL.
+
+      LOOP AT lt_t_text INTO DATA(ls_s_text).
+        CLEAR lv_str.
+        IF ls_s_text IS NOT INITIAL.
+
+          lv_line_edit_len = strlen( ls_s_text ).
+          lv_line_edit_sub = 90 - lv_line_edit_len.
+
+          CLEAR lv_spaces.
+
+          DO lv_line_edit_sub TIMES.
+
+            CONCATENATE lv_spaces ` ` INTO lv_spaces.
+          ENDDO.
+
+
+          lv_str = ls_s_text.
+          CONCATENATE lv_str_main lv_str lv_spaces INTO lv_str_main RESPECTING BLANKS.
+
+        ENDIF.
+
+
+        CLEAR ls_s_text.
+      ENDLOOP.
+
+      SHIFT lv_str_main LEFT DELETING LEADING space.
+
+      CLEAR ls_s_text.
+
+
+    ENDIF.
+
+    IF  lv_str_main IS NOT INITIAL.
+
+      CLEAR ls_main-formula.
+      ls_main-formula = lv_str_main.
+    ENDIF.
+
+
+  ENDMETHOD.
+
+  METHOD fill_structure.
+
+    ls_main-matnr   = matnr_in.
+
+  ENDMETHOD.
+
+
+  METHOD save_entrie.
+
+    CLEAR ls_save.
+
+    lcl_main=>fill_tab_text( ).
+
+    IF ls_main IS NOT INITIAL.
+
+    IF formula_name IS NOT INITIAL.
+
+      CLEAR ls_save.
+      ls_save-formula_name = formula_name.
+      ls_save-formula = ls_main-formula.
+
+      IF ls_save IS NOT INITIAL.
+
+       MODIFY zformula_tab FROM ls_save.
+
+        IF sy-subrc EQ 0.
+          MESSAGE i001(zlrn239_msg_eval_cal).
+        ELSE.
+          MESSAGE i002(zlrn239_msg_eval_cal).
+        ENDIF.
+      ENDIF.
+
+    ELSE.
+
+      MESSAGE i003(zlrn239_msg_eval_cal) DISPLAY LIKE 'E'.
+    ENDIF.
+
+ENDIF.
+
+  ENDMETHOD.
+
+
+  METHOD clear_entrie.
+
+    CLEAR:
+
+
+
+
+      ls_main,
+      lv_flag_exist.
+
+
+    REFRESH lt_t_text.
+
+    lr_editor->delete_text( ).
+
+
+  ENDMETHOD.
+
+  METHOD pop_up_save.
+
+    DATA lv_popup_return_2(1).
+
+    CALL FUNCTION 'POPUP_TO_CONFIRM'
+      EXPORTING
+        titlebar              =  text-102 "Confirmation
+        text_question         =  text-103 "Do you want to save ?
+        text_button_1         =  text-100 "Yes
+        text_button_2         =  text-101 "No
+        default_button        = '2'
+        display_cancel_button = 'X'
+      IMPORTING
+        answer                = lv_popup_return_2
+      EXCEPTIONS
+        text_not_found        = 1
+        OTHERS                = 2.
+    IF sy-subrc <> 0.
+      MESSAGE ID sy-msgid TYPE sy-msgty NUMBER sy-msgno
+      WITH sy-msgv1 sy-msgv2 sy-msgv3 sy-msgv4.
+    ENDIF.
+    CASE lv_popup_return_2.
+      WHEN '1'.
+
+        lcl_main=>check_exist( ).
+
+        IF ls_exist IS INITIAL.
+
+        lcl_main=>save_entrie( ).
+
+        ELSE.
+
+        lcl_main=>pop_up_save_exist( ).
+
+        ENDIF.
+
+      WHEN '2'.
+
+      WHEN 'A'.
+
+    ENDCASE.
+
+
+
+  ENDMETHOD.
+
+  METHOD pop_up_save_exist.
+
+    DATA lv_popup_return_3(1).
+
+    CALL FUNCTION 'POPUP_TO_CONFIRM'
+      EXPORTING
+        titlebar              =  text-102 "Confirmation
+        text_question         =  text-104 "Entry exists , overwrite ?
+        text_button_1         =  text-100 "Yes
+        text_button_2         =  text-101 "No
+        default_button        = '2'
+        display_cancel_button = 'X'
+      IMPORTING
+        answer                = lv_popup_return_3
+      EXCEPTIONS
+        text_not_found        = 1
+        OTHERS                = 2.
+    IF sy-subrc <> 0.
+      MESSAGE ID sy-msgid TYPE sy-msgty NUMBER sy-msgno
+      WITH sy-msgv1 sy-msgv2 sy-msgv3 sy-msgv4.
+    ENDIF.
+    CASE lv_popup_return_3.
+      WHEN '1'.
+
+        lcl_main=>save_entrie( ).
+
+      WHEN '2'.
+
+      WHEN 'A'.
+
+    ENDCASE.
+
+
+
+  ENDMETHOD.
+
+
+  METHOD pop_up_delete.
+
+    DATA lv_popup_return_3(1).
+
+    CALL FUNCTION 'POPUP_TO_CONFIRM'
+      EXPORTING
+        titlebar              = text-102 "Confirmation
+        text_question         = text-105 "Are you sure you want to delete?
+        text_button_1         = text-100 "Yes
+        text_button_2         = text-101 "No
+        default_button        = '2'
+        display_cancel_button = 'X'
+      IMPORTING
+        answer                = lv_popup_return_3
+      EXCEPTIONS
+        text_not_found        = 1
+        OTHERS                = 2.
+    IF sy-subrc <> 0.
+      MESSAGE ID sy-msgid TYPE sy-msgty NUMBER sy-msgno
+      WITH sy-msgv1 sy-msgv2 sy-msgv3 sy-msgv4.
+    ENDIF.
+    CASE lv_popup_return_3.
+      WHEN '1'.
+
+
+        lcl_main=>check_exist( ).
+
+        IF ls_exist IS NOT INITIAL.
+
+        lcl_main=>delete_entrie( ).
+
+        MESSAGE i007(zlrn239_msg_eval_cal).
+
+        ELSE.
+
+        ENDIF.
+
+      WHEN '2'.
+
+      WHEN 'A'.
+
+    ENDCASE.
+
+  ENDMETHOD.
+
+
+
+  METHOD fill_struct_exist.
+
+
+    TYPES: BEGIN OF ty_text_set,
+             text TYPE char200,
+           END OF  ty_text_set.
+
+    DATA: lt_t_text_set TYPE TABLE OF ty_text_set,
+          ls_t_text_set TYPE ty_text_set.
+
+    CLEAR: lt_t_text_set,
+        ls_t_text_set.
+
+
+
+  ENDMETHOD.
+
+
+
+  METHOD vrm_variables.
+
+    CLEAR: lv_value,
+           lv_values,
+           lv_value2,
+           lv_values2,
+           lv_value3,
+           lv_values3.
+
+
+
+    lv_values = VALUE #(
+                          ( key = 1 text = `LEN_EL` )
+                          ( key = 2 text = `WID_EL` )
+                          ( key = 3 text = `HEI_EL` )
+
+                          ).
+
+
+
+    CALL FUNCTION 'VRM_SET_VALUES'
+      EXPORTING
+        id              = 'LV_ZMIENNE_ID'
+        values          = lv_values
+      EXCEPTIONS
+        id_illegal_name = 1
+        OTHERS          = 2.
+
+
+     lv_values2 = VALUE #(
+                          ( key = 1 text = `eval( )` )
+                          ( key = 2 text = `eval("if ( condition ) { true; }")` )
+                          ( key = 3 text = `eval("if ( condition ) { true; } else { false; }")` )
+                          ( key = 4 text = `eval("if ( condition ) { true; } else if ( condition2 ) { true; } else { ; } ")` )
+                          ( key = 5 text = `eval("if ( cond1 && cond2 ) { true; } else { false; }")` )
+                          ( key = 6 text = `eval("if ( cond1 || cond2 ) { true; } else { false; }")` )
+                          ( key = 7 text = `if ( condition ) { true; } else { false; }` )
+                          ( key = 8 text = `Math.min( , n..)`)
+                          ( key = 9 text = `Math.max( , n..)`)
+                          ( key = 10 text = `Math.pow( , )`)
+                          ( key = 11 text = `Math.round( )`)
+                          ( key = 12 text = `Math.ceil( )`)
+                          ( key = 13 text = `Math.floor( )`)
+                          ( key = 14 text = `Math.abs(- )`)
+                          ( key = 15 text = `Math.sqrt( )`)
+                          ( key = 16 text = `Math.random( )`)
+                          ( key = 17 text = `Math.PI`)
+                          ( key = 18 text = `parseFloat(())`)
+                          ( key = 19 text = `new Date()`)
+                          ( key = 19 text = `new Date("MonthName Day, Year Hour:Minute:Second")`)
+                          ( key = 20 text = `new Date(year, month, day, hour, minute, second,millisecond)`)
+                          ( key = 21 text = `new Date().getFullYear()`)
+                          ( key = 22 text = `new Date().getMonth()`)
+                          ( key = 23 text = `new Date().getDate()`)
+                          ( key = 24 text = `new Date().getDay()`)
+                          ( key = 25 text = `new Date().getHours()`)
+                          ( key = 26 text = `new Date().getMinutes()`)
+                          ( key = 27 text = `new Date().getSeconds()`)
+                          ( key = 28 text = `new Date().getMilliseconds()`)
+                          ( key = 29 text = `new Date().getTime()`)
+
+                          ).
+
+
+
+
+
+    CALL FUNCTION 'VRM_SET_VALUES'
+      EXPORTING
+        id              = 'LV_FX_ID'
+        values          = lv_values2
+      EXCEPTIONS
+        id_illegal_name = 1
+        OTHERS          = 2.
+
+
+
+
+    lv_values3 = VALUE #(
+                          ( key = 1 text = `+` )
+                          ( key = 2 text = `-` )
+                          ( key = 3 text = `*` )
+                          ( key = 4 text = `/` )
+                          ( key = 5 text = `==` )
+                          ( key = 6 text = `!=` )
+                          ( key = 7 text = `%` )
+                          ( key = 8 text = `>` )
+                          ( key = 9 text = `<` )
+                          ( key = 10 text = `>=` )
+                          ( key = 11 text = `<=` )
+                          ( key = 12 text = `&&` )
+                          ( key = 13 text = `||` )
+                          ( key = 14 text = `!` )
+                          ( key = 15 text = `()` )
+                          ( key = 16 text = `(` )
+                          ( key = 17 text = `)` )
+
+                          ).
+
+
+
+    CALL FUNCTION 'VRM_SET_VALUES'
+      EXPORTING
+        id              = 'LV_OPERATORS_ID'
+        values          = lv_values3
+      EXCEPTIONS
+        id_illegal_name = 1
+        OTHERS          = 2.
+
+
+
+
+  ENDMETHOD.
+
+
+  METHOD get_matnr_data.
+
+    CLEAR: ls_main-laeng,
+           ls_main-breit,
+           ls_main-hoehe.
+
+
+
+    IF  matnr_in IS NOT INITIAL.
+
+      SELECT SINGLE laeng ,breit ,hoehe
+               FROM mara
+               INTO CORRESPONDING FIELDS OF @ls_main
+      WHERE matnr = @matnr_in.
+
+
+      len_in = ls_main-laeng.
+      wid_in = ls_main-breit.
+      hei_in = ls_main-hoehe.
+
+    ENDIF.
+
+
+
+  ENDMETHOD.
+
+
+
+
+  METHOD set_variables.
+
+*** concatanating text in editor depending on setting variable from "variables"
+
+    CLEAR:
+    lv_from_line, "
+    lv_from_pos,  "
+    lv_to_line,   "
+    lv_to_pos,    "
+    lv_string_lengh,
+    lv_string_sub,
+    lv_string_part1,
+    lv_string_part2,
+    ls_read_values,
+
+    ls_t_text_set2,
+    lt_t_text_set2,
+
+    lt_t_text,
+    ls_t_text,
+    lt_t_text2,
+    lv_string_formula,
+    lv_string_formula_main.
+
+    lr_editor->get_text_as_r3table(
+     IMPORTING
+       table           = lt_t_text
+     EXCEPTIONS
+       error_dp        = 1
+       error_dp_create = 2
+       OTHERS          = 3 ).
+
+
+
+    lr_editor->get_selection_pos(
+      IMPORTING
+        from_line              = lv_from_line
+        from_pos               = lv_from_pos
+        to_line                = lv_to_line
+        to_pos                 = lv_to_pos
+      EXCEPTIONS
+        error_cntl_call_method = 1
+        OTHERS                 = 2 ).
+
+
+    IF lv_from_line IS NOT INITIAL.
+      READ TABLE lt_t_text INDEX lv_from_line INTO ls_t_text.
+
+      IF ls_t_text IS NOT INITIAL.
+
+        IF lv_zmienne_id IS NOT INITIAL.
+
+          READ TABLE lv_values INTO ls_read_values WITH KEY key = lv_zmienne_id.
+
+          TRY.
+
+              lv_real_position = lv_from_pos - 1.
+
+              lv_string_lengh = strlen( ls_t_text ).
+              lv_string_sub = lv_string_lengh - lv_real_position.
+
+
+              IF lv_real_position = 0.
+
+                CONCATENATE  ls_read_values-text  ls_t_text  INTO ls_t_text_set2-text.
+
+                CLEAR ls_t_text_set2-text.
+
+                ls_t_text_set2-text = |{ ls_read_values-text  }| & |{ ls_t_text }|.
+
+              ELSEIF lv_real_position > lv_string_lengh.
+                lv_string_part1 = ls_t_text(lv_string_lengh).
+                lv_string_part2 = ''.
+
+
+                ls_t_text_set2-text = |{ lv_string_part1 }| & |{ ls_read_values-text }| & |{ lv_string_part2 }|.
+
+
+              ELSEIF lv_real_position < lv_string_lengh.
+
+                lv_string_part1 = ls_t_text(lv_real_position).
+                lv_string_part2 = ls_t_text+lv_real_position(lv_string_sub).
+
+
+                ls_t_text_set2-text = |{ lv_string_part1  }| & |{ ls_read_values-text }| & |{ lv_string_part2 }|.
+
+
+              ELSEIF lv_string_lengh = lv_real_position.
+
+                ls_t_text_set2-text = |{ ls_t_text  }| & |{ ls_read_values-text }|.
+
+              ENDIF.
+
+
+            CATCH cx_root INTO DATA(e_text).
+              MESSAGE e_text->get_text( ) TYPE 'I'.
+          ENDTRY.
+
+
+
+          IF ls_t_text_set2-text IS NOT INITIAL.
+            MODIFY lt_t_text FROM ls_t_text_set2-text INDEX lv_from_line.
+
+            lr_editor->delete_text(
+               EXCEPTIONS
+                 error_cntl_call_method = 1
+                 OTHERS                 = 2 ).
+
+
+
+            lr_editor->set_selected_text_as_r3table(
+              EXPORTING
+                table           = lt_t_text
+
+              EXCEPTIONS
+                error_dp        = 1
+                error_dp_create = 2
+                OTHERS          = 3 ).
+
+
+            CLEAR ls_t_text.
+
+            LOOP AT lt_t_text INTO ls_t_text.
+              IF ls_t_text IS NOT INITIAL.
+                CLEAR lv_string_formula.
+                lv_string_formula = ls_t_text.
+
+                lv_string_formula_main = | { lv_string_formula_main  } | & | { lv_string_formula  } |.
+
+              ENDIF.
+              CLEAR ls_t_text.
+            ENDLOOP.
+
+            IF  lv_string_formula_main IS NOT INITIAL.
+              CLEAR ls_main-formula.
+              ls_main-formula = lv_string_formula_main.
+            ENDIF.
+
+
+          ENDIF.
+
+
+        ENDIF.
+
+
+      ELSE.
+
+
+        IF lv_zmienne_id IS NOT INITIAL.
+
+          READ TABLE lv_values INTO ls_read_values WITH KEY key = lv_zmienne_id.
+
+        ENDIF.
+
+        IF ls_read_values-text IS NOT INITIAL.
+          ls_t_text_set2-text = ls_read_values-text.
+
+          APPEND ls_t_text_set2-text TO lt_t_text.
+
+
+          lr_editor->delete_text(
+            EXCEPTIONS
+              error_cntl_call_method = 1
+              OTHERS                 = 2 ).
+
+          lr_editor->set_selected_text_as_r3table(
+            EXPORTING
+              table           = lt_t_text
+
+            EXCEPTIONS
+              error_dp        = 1
+              error_dp_create = 2
+              OTHERS          = 3 ).
+
+
+          CLEAR ls_t_text.
+
+          LOOP AT lt_t_text INTO ls_t_text.
+            IF ls_t_text IS NOT INITIAL.
+              CLEAR lv_string_formula.
+              lv_string_formula = ls_t_text.
+
+              lv_string_formula_main = |{ lv_string_formula_main }| & |{ lv_string_formula }|.
+
+            ENDIF.
+            CLEAR ls_t_text.
+          ENDLOOP.
+
+          IF  lv_string_formula_main IS NOT INITIAL.
+            CLEAR ls_main-formula.
+            ls_main-formula = lv_string_formula_main.
+          ENDIF.
+
+        ENDIF.
+
+      ENDIF.
+
+    ENDIF.
+
+  ENDMETHOD.
+
+  METHOD set_functions.
+
+*** concatanating text in editor depending on setting formula from "fx"
+
+    CLEAR:
+  lv_from_line, "
+  lv_from_pos,  "
+  lv_to_line,   "
+  lv_to_pos,    "
+  lv_string_lengh,
+  lv_string_sub,
+  lv_string_part1,
+  lv_string_part2,
+  ls_read_values,
+
+  ls_t_text_set2,
+  lt_t_text_set2,
+
+  lt_t_text,
+  ls_t_text,
+  lt_t_text2,
+  lv_string_formula,
+  lv_string_formula_main.
+
+
+    lr_editor->get_text_as_r3table(
+     IMPORTING
+       table           = lt_t_text
+     EXCEPTIONS
+       error_dp        = 1
+       error_dp_create = 2
+       OTHERS          = 3 ).
+
+
+    lr_editor->get_selection_pos(
+     IMPORTING
+       from_line              = lv_from_line
+       from_pos               = lv_from_pos
+       to_line                = lv_to_line
+       to_pos                 = lv_to_pos
+     EXCEPTIONS
+       error_cntl_call_method = 1
+       OTHERS                 = 2 ).
+
+
+    IF lv_from_line IS NOT INITIAL.
+      READ TABLE lt_t_text INDEX lv_from_line INTO ls_t_text.
+
+      IF ls_t_text IS NOT INITIAL.
+
+        IF lv_fx_id IS NOT INITIAL.
+
+          READ TABLE lv_values2 INTO ls_read_values WITH KEY key = lv_fx_id.
+
+          TRY.
+
+              lv_real_position = lv_from_pos - 1.
+
+              lv_string_lengh = strlen( ls_t_text ).
+              lv_string_sub = lv_string_lengh - lv_real_position.
+
+
+              IF lv_real_position = 0.
+
+                ls_t_text_set2-text = |{ ls_read_values-text }| & |{ ls_t_text }|.
+
+              ELSEIF lv_real_position > lv_string_lengh.
+                lv_string_part1 = ls_t_text(lv_string_lengh).
+                lv_string_part2 = ''.
+
+                ls_t_text_set2-text = |{ lv_string_part1 }| & |{ ls_read_values-text }| & |{ lv_string_part2 }|.
+
+              ELSEIF lv_real_position < lv_string_lengh.
+
+                lv_string_part1 = ls_t_text(lv_real_position).
+                lv_string_part2 = ls_t_text+lv_real_position(lv_string_sub).
+
+                ls_t_text_set2-text = |{ lv_string_part1 }| & |{ ls_read_values-text }| & |{ lv_string_part2 }|.
+
+
+              ELSEIF lv_string_lengh = lv_real_position.
+
+
+                ls_t_text_set2-text = |{ ls_t_text }| & |{ ls_read_values-text }|.
+
+
+              ENDIF.
+
+
+            CATCH cx_root INTO DATA(e_text).
+              MESSAGE e_text->get_text( ) TYPE 'I'.
+          ENDTRY.
+
+
+
+          IF ls_t_text_set2-text IS NOT INITIAL.
+            MODIFY lt_t_text FROM ls_t_text_set2-text INDEX lv_from_line.
+
+
+            lr_editor->delete_text(
+             EXCEPTIONS
+               error_cntl_call_method = 1
+               OTHERS                 = 2 ).
+
+
+            lr_editor->delete_text(
+           EXCEPTIONS
+             error_cntl_call_method = 1
+             OTHERS                 = 2 ).
+
+
+
+            lr_editor->set_selected_text_as_r3table(
+               EXPORTING
+                 table           = lt_t_text
+               EXCEPTIONS
+                 error_dp        = 1
+                 error_dp_create = 2
+                 OTHERS          = 3 ).
+
+
+
+            CLEAR ls_t_text.
+
+            LOOP AT lt_t_text INTO ls_t_text.
+              IF ls_t_text IS NOT INITIAL.
+                CLEAR lv_string_formula.
+                lv_string_formula = ls_t_text.
+
+                lv_string_formula_main = |{ lv_string_formula_main }| & |{ lv_string_formula }|.
+
+              ENDIF.
+              CLEAR ls_t_text.
+            ENDLOOP.
+
+            IF  lv_string_formula_main IS NOT INITIAL.
+              CLEAR ls_main-formula.
+              ls_main-formula = lv_string_formula_main.
+            ENDIF.
+
+          ENDIF.
+
+        ENDIF.
+
+
+      ELSE.
+
+        IF lv_fx_id IS NOT INITIAL.
+
+          READ TABLE lv_values2 INTO ls_read_values WITH KEY key = lv_fx_id.
+
+        ENDIF.
+
+        IF ls_read_values-text IS NOT INITIAL.
+          ls_t_text_set2-text = ls_read_values-text.
+
+          APPEND ls_t_text_set2-text TO lt_t_text.
+
+          lr_editor->delete_text(
+            EXCEPTIONS
+              error_cntl_call_method = 1
+              OTHERS                 = 2 ).
+
+
+          lr_editor->set_selected_text_as_r3table(
+            EXPORTING
+              table           = lt_t_text
+
+            EXCEPTIONS
+              error_dp        = 1
+              error_dp_create = 2
+              OTHERS          = 3 ).
+
+
+          CLEAR ls_t_text.
+
+          LOOP AT lt_t_text INTO ls_t_text.
+            IF ls_t_text IS NOT INITIAL.
+              CLEAR lv_string_formula.
+              lv_string_formula = ls_t_text.
+
+              lv_string_formula_main = |{ lv_string_formula_main }| & |{ lv_string_formula }|.
+
+            ENDIF.
+            CLEAR ls_t_text.
+          ENDLOOP.
+
+          IF  lv_string_formula_main IS NOT INITIAL.
+            CLEAR ls_main-formula.
+            ls_main-formula = lv_string_formula_main.
+          ENDIF.
+
+        ENDIF.
+
+      ENDIF.
+
+    ENDIF.
+
+  ENDMETHOD.
+
+
+ METHOD set_operators.
+
+*** concatanating text in editor depending on setting formula from "operators"
+
+    CLEAR:
+  lv_from_line, "
+  lv_from_pos,  "
+  lv_to_line,   "
+  lv_to_pos,    "
+  lv_string_lengh,
+  lv_string_sub,
+  lv_string_part1,
+  lv_string_part2,
+  ls_read_values,
+
+  ls_t_text_set2,
+  lt_t_text_set2,
+
+  lt_t_text,
+  ls_t_text,
+  lt_t_text2,
+  lv_string_formula,
+  lv_string_formula_main.
+
+
+    lr_editor->get_text_as_r3table(
+     IMPORTING
+       table           = lt_t_text
+     EXCEPTIONS
+       error_dp        = 1
+       error_dp_create = 2
+       OTHERS          = 3 ).
+
+
+    lr_editor->get_selection_pos(
+     IMPORTING
+       from_line              = lv_from_line
+       from_pos               = lv_from_pos
+       to_line                = lv_to_line
+       to_pos                 = lv_to_pos
+     EXCEPTIONS
+       error_cntl_call_method = 1
+       OTHERS                 = 2 ).
+
+
+    IF lv_from_line IS NOT INITIAL.
+      READ TABLE lt_t_text INDEX lv_from_line INTO ls_t_text.
+
+      IF ls_t_text IS NOT INITIAL.
+
+        IF lv_operators_id IS NOT INITIAL.
+
+          READ TABLE lv_values3 INTO ls_read_values WITH KEY key = lv_operators_id.
+
+          TRY.
+
+              lv_real_position = lv_from_pos - 1.
+
+              lv_string_lengh = strlen( ls_t_text ).
+              lv_string_sub = lv_string_lengh - lv_real_position.
+
+
+              IF lv_real_position = 0.
+
+                ls_t_text_set2-text = |{ ls_read_values-text }| & |{ ls_t_text }|.
+
+              ELSEIF lv_real_position > lv_string_lengh.
+                lv_string_part1 = ls_t_text(lv_string_lengh).
+                lv_string_part2 = ''.
+
+                ls_t_text_set2-text = |{ lv_string_part1 }| & |{ ls_read_values-text }| & |{ lv_string_part2 }|.
+
+              ELSEIF lv_real_position < lv_string_lengh.
+
+                lv_string_part1 = ls_t_text(lv_real_position).
+                lv_string_part2 = ls_t_text+lv_real_position(lv_string_sub).
+
+                ls_t_text_set2-text = |{ lv_string_part1 }| & |{ ls_read_values-text }| & |{ lv_string_part2 }|.
+
+
+              ELSEIF lv_string_lengh = lv_real_position.
+
+
+                ls_t_text_set2-text = |{ ls_t_text }| & |{ ls_read_values-text }|.
+
+
+              ENDIF.
+
+
+            CATCH cx_root INTO DATA(e_text).
+              MESSAGE e_text->get_text( ) TYPE 'I'.
+          ENDTRY.
+
+
+
+          IF ls_t_text_set2-text IS NOT INITIAL.
+            MODIFY lt_t_text FROM ls_t_text_set2-text INDEX lv_from_line.
+
+
+            lr_editor->delete_text(
+             EXCEPTIONS
+               error_cntl_call_method = 1
+               OTHERS                 = 2 ).
+
+
+            lr_editor->delete_text(
+           EXCEPTIONS
+             error_cntl_call_method = 1
+             OTHERS                 = 2 ).
+
+
+
+            lr_editor->set_selected_text_as_r3table(
+               EXPORTING
+                 table           = lt_t_text
+               EXCEPTIONS
+                 error_dp        = 1
+                 error_dp_create = 2
+                 OTHERS          = 3 ).
+
+
+
+            CLEAR ls_t_text.
+
+            LOOP AT lt_t_text INTO ls_t_text.
+              IF ls_t_text IS NOT INITIAL.
+                CLEAR lv_string_formula.
+                lv_string_formula = ls_t_text.
+
+                lv_string_formula_main = |{ lv_string_formula_main }| & |{ lv_string_formula }|.
+
+              ENDIF.
+              CLEAR ls_t_text.
+            ENDLOOP.
+
+            IF  lv_string_formula_main IS NOT INITIAL.
+              CLEAR ls_main-formula.
+              ls_main-formula = lv_string_formula_main.
+            ENDIF.
+
+
+          ENDIF.
+
+
+        ENDIF.
+
+
+      ELSE.
+
+
+        IF lv_operators_id IS NOT INITIAL.
+
+          READ TABLE lv_values3 INTO ls_read_values WITH KEY key = lv_operators_id.
+
+        ENDIF.
+
+        IF ls_read_values-text IS NOT INITIAL.
+          ls_t_text_set2-text = ls_read_values-text.
+
+          APPEND ls_t_text_set2-text TO lt_t_text.
+
+          lr_editor->delete_text(
+            EXCEPTIONS
+              error_cntl_call_method = 1
+              OTHERS                 = 2 ).
+
+
+          lr_editor->set_selected_text_as_r3table(
+            EXPORTING
+              table           = lt_t_text
+
+            EXCEPTIONS
+              error_dp        = 1
+              error_dp_create = 2
+              OTHERS          = 3 ).
+
+
+
+          CLEAR ls_t_text.
+
+          LOOP AT lt_t_text INTO ls_t_text.
+            IF ls_t_text IS NOT INITIAL.
+              CLEAR lv_string_formula.
+              lv_string_formula = ls_t_text.
+
+              lv_string_formula_main = |{ lv_string_formula_main }| & |{ lv_string_formula }|.
+
+            ENDIF.
+            CLEAR ls_t_text.
+          ENDLOOP.
+
+          IF  lv_string_formula_main IS NOT INITIAL.
+            CLEAR ls_main-formula.
+            ls_main-formula = lv_string_formula_main.
+          ENDIF.
+
+        ENDIF.
+
+      ENDIF.
+
+    ENDIF.
+
+
+  ENDMETHOD.
+
+
+
+  METHOD macros_variables.
+
+
+    DATA: lv_len TYPE char11,
+          lv_wid TYPE char11,
+          lv_hei TYPE char11.
+
+
+    DEFINE zvariables_formula.
+
+      DATA: result TYPE string.
+
+      result =  ls_main-formula.
+
+      IF ls_main-formula CS 'LEN_EL'. " p_inp.
+      REPLACE ALL OCCURRENCES OF 'LEN_EL' IN ls_main-formula WITH &1.
+      ENDIF.
+      IF ls_main-formula CS 'WID_EL'. " p_inp.
+      REPLACE ALL OCCURRENCES OF 'WID_EL' IN ls_main-formula WITH &2.
+      ENDIF.
+      IF ls_main-formula CS 'HEI_EL'. " p_inp.
+      REPLACE ALL OCCURRENCES OF 'HEI_EL' IN ls_main-formula WITH &3.
+      ENDIF.
+
+
+    END-OF-DEFINITION.
+
+
+
+    IF len_in IS  NOT INITIAL.
+      lv_len = len_in.
+      CONDENSE lv_len NO-GAPS.
+    ENDIF.
+
+    IF wid_in IS  NOT INITIAL.
+      lv_wid = wid_in.
+      CONDENSE lv_wid NO-GAPS.
+    ENDIF.
+
+    IF hei_in IS  NOT INITIAL.
+      lv_hei = hei_in.
+      CONDENSE lv_hei NO-GAPS.
+    ENDIF.
+
+
+
+    IF ls_main-formula IS NOT INITIAL.
+      zvariables_formula lv_len lv_wid lv_hei .
+    ENDIF.
+
+
+  ENDMETHOD.
+
+
+  METHOD evaluator.
+
+    CLEAR result_out.
+
+    DATA: message      TYPE string,
+          source       TYPE string,
+          return_value TYPE string.
+
+    DATA: js_processor TYPE REF TO cl_java_script.
+
+
+    IF ls_main-formula IS NOT INITIAL.
+
+      lcl_main=>macros_variables( ).
+
+      message = ls_main-formula.
+
+
+      js_processor = cl_java_script=>create( ).
+      CONCATENATE
+        'var string = ' message ';'
+        'function Set_String()                          '
+        '  { string = eval(string);                     '
+        '  }                                            '
+        'Set_String();                                  '
+        'string;                                        '
+          INTO source SEPARATED BY cl_abap_char_utilities=>cr_lf.
+
+      return_value = js_processor->evaluate( source ).
+
+
+      result_out = return_value.
+
+    ENDIF.
+
+  ENDMETHOD.
+
+
+
+  METHOD set_display_text.
+
+    IF   gv_reminder = 0.
+      lr_editor->set_readonly_mode(
+       EXPORTING
+         readonly_mode          = 1
+       EXCEPTIONS
+         error_cntl_call_method = 1
+         invalid_parameter      = 2
+         OTHERS                 = 3 ).
+    ENDIF.
+
+
+  ENDMETHOD.
+
+
+  METHOD set_change_text.
+
+    gv_evenodd = gv_evenodd + 1.
+    gv_reminder = gv_evenodd  MOD 2.
+
+    IF   gv_reminder <> 0.
+      lr_editor->set_readonly_mode(
+       EXPORTING
+         readonly_mode          = 0
+       EXCEPTIONS
+         error_cntl_call_method = 1
+         invalid_parameter      = 2
+         OTHERS                 = 3 ).
+    ENDIF.
+
+
+  ENDMETHOD.
+
+
+METHOD clear_result.
+  CLEAR result_out.
+ENDMETHOD.
+
+METHOD check_exist.
+
+CLEAR ls_exist.
+
+  SELECT SINGLE formula_name, formula
+     FROM zformula_tab
+     INTO CORRESPONDING FIELDS OF @ls_exist
+             WHERE formula_name = @formula_name.
+
+
+ENDMETHOD.
+
+
+METHOD check_set_exist.
+
+  lcl_main=>check_exist( ).
+
+   IF ls_exist IS NOT INITIAL.
+
+  CLEAR ls_main-formula.
+
+          ls_main-formula = ls_exist-formula.
+
+          lr_editor->set_textstream(
+            EXPORTING
+              text                   = ls_main-formula
+            EXCEPTIONS
+              error_cntl_call_method = 1
+              not_supported_by_gui   = 2
+              OTHERS                 = 3 ).
+
+    ELSE.
+
+       lr_editor->delete_text( ).
+
+ ENDIF.
+
+ENDMETHOD.
+
+
+METHOD delete_entrie.
+
+
+
+  IF ls_main IS NOT INITIAL.
+
+    IF formula_name IS NOT INITIAL.
+
+      CLEAR ls_delete.
+      ls_delete-formula_name = formula_name.
+      ls_delete-formula = ls_main-formula.
+
+      IF ls_delete IS NOT INITIAL.
+
+     DELETE zformula_tab FROM ls_delete.
+
+        IF sy-subrc EQ 0.
+          MESSAGE i004(zlrn239_msg_eval_cal).
+          lr_editor->delete_text( ).
+          CLEAR formula_name.
+        ELSE.
+          MESSAGE i005(zlrn239_msg_eval_cal).
+        ENDIF.
+      ENDIF.
+
+    ELSE.
+      MESSAGE i006(zlrn239_msg_eval_cal) DISPLAY LIKE 'E'.
+    ENDIF.
+
+ENDIF.
+
+
+ENDMETHOD.
+
+ENDCLASS.               "lcl_main
 
 
 
