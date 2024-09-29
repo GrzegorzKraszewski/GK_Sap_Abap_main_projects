@@ -1599,8 +1599,24 @@ ENDMODULE.
 
 ![description_of_usage](https://github.com/user-attachments/assets/5e3edef6-5a42-4963-bc13-d05cbfeb37c6)
 
-<h3>Explanation</h3>
+<ol type="1">
+<li>Section</li>
+<br>
+         
+<ul>
+<li>a - Button to exit from program </li>
+<li>b - Button to  Save in Database</li>
+<li>c - Button to  Display/Change Editor (Section 2)</li>
+<li>d - Button to  Clear all from Editor (Section 2)</li>
+<li>b - Button to  Delete entrie with formula from Database</li>
+</ul>
 
+<br>       
+<li>Punkt drugi</li>
+<li>Punkt trzeci</li>
+</ol>
+
+<h3>Explanation</h3>
 <h3>What we can do/what we can use in program operators methods etc.</h3>
 <h3>Useful and supported operators methods</h3>
 
