@@ -1618,8 +1618,8 @@ ENDMODULE.
 <li>a - Area to fill calculations/formula in Editor </li>
 <li>b - Button to cut in Editor</li>
 <li>c - Button to copy into Editor</li>
-<li>d - Button to insert into Editor<</li>
-<li>e - Button to Undo in Editor<</li>         
+<li>d - Button to insert into Editor</li>
+<li>e - Button to Undo in Editor</li>         
 <li>f - Button to Restore in Editor</li>
 <li>g - Button to Find/replace in Editor</li>
 <li>h - Button to Find next in Editor</li>
@@ -1627,7 +1627,18 @@ ENDMODULE.
 <li>j - Button to Save as local file in Editor</li>
 </ul>
 <br>         
-<li>Punkt trzeci</li>
+<li>Section - set of input/output fields</li>
+<br>
+<ul>
+<li>a - input/output field for formula name to save (using save button from section 1) in database or get from database using "Get" button from this level</li> 
+<li>b - Listbox field for provided variabels. Use "Insert" button from this level to insert variable into Edtior </li>
+<br>
+         
+![var_section](https://github.com/user-attachments/assets/5b8582e8-69f1-493f-a07b-9f4c1be15c97)
+
+<br>
+</ul>
+<br>
 </ol>
 
 <h3>Explanation</h3>
