@@ -1649,7 +1649,9 @@ ENDMODULE.
 ![oper_section](https://github.com/user-attachments/assets/06ae300c-992d-4ea4-8e2e-2acef57ffb5c)
 
 <br>
-<li>c - This is example input field which can be use to get data from Database. In this case if the field "Matnr" ( Material number) will be fielled , after "Get" button press from this level, fields from level f from that section will be populated (of course, if the data exists for the material) </li>
+<li>e - This is example of input field which can be use to get data from Database. In this case if the field "Matnr" ( Material number) will be fielled , after "Get" button press from this level, fields from level f from that section will be populated (of course, if the data exists for the material) </li>
+<li>f -  The reasult fields from e of this Section. Also to use values from this fields in Editor ,  they  must be embedded in b (Var)  of this section </li>
+<li>g - Output field with the result of caculations from editor . Use "check" button to make calculation from editor and get result. Use anotfer button from this level ( from g level ) to clear reasult from output field</li>
 </ul>
 <br>
 </ol>
