@@ -1637,6 +1637,18 @@ ENDMODULE.
 ![var_section](https://github.com/user-attachments/assets/5b8582e8-69f1-493f-a07b-9f4c1be15c97)
 
 <br>
+<li>c - Listbox field for JS Logic or Functions. Use "Insert" button from this level to insert Logic or Function into Edtior </li>
+<br>
+
+![Log_Fun_section](https://github.com/user-attachments/assets/ba6c50cc-0a3b-4d0f-8829-0c037e9fbd38)
+
+<br>
+<li>d - Listbox field for accessible  JS Operators. Use "Insert" button from this level to insert Operator into Edtior </li>
+<br>
+
+![oper_section](https://github.com/user-attachments/assets/06ae300c-992d-4ea4-8e2e-2acef57ffb5c)
+
+<br>
 </ul>
 <br>
 </ol>
