@@ -3,6 +3,7 @@
 <h2>This program shows the way how you can generate formula/calculations using javascript evaluator class and macros in SAP ABAP </h2><br><br>
 
 <h3>Key factors</h3><br><br> 
+<p>This tool provides two main options => you can check the  calculations/formula using some of the js notation and  it gives possibilite to manage the  calculations/formula ( save, edit, delete in/from Data Base )  </p>
 <p>We aren't declairng variables in editor as let, var etc.</p>
 <p>Posible variables to use are embedded in var listbox => there are used macros for it and we creating a list with accessible variables to use in program</p>
 <p>Program present possible useful operators methods etc.</p>
