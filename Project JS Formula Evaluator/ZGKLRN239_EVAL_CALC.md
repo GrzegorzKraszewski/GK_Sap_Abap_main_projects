@@ -1649,6 +1649,7 @@ ENDMODULE.
 ![oper_section](https://github.com/user-attachments/assets/06ae300c-992d-4ea4-8e2e-2acef57ffb5c)
 
 <br>
+<li>c - This is example input field which can be use to get data from Database. In this case if the field "Matnr" ( Material number) will be fielled , after "Get" button press from this level, fields from level f from that section will be populated (of course, if the data exists for the material) </li>
 </ul>
 <br>
 </ol>
