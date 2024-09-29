@@ -13,7 +13,7 @@
 
 <br><br>
 <h6 id="usageb"></h6>
-<h3> Too see usage/behavior of program please click <a href="#usage">here</a></h3<br><br>
+<h3> Too see usage/behavior of program please click <a href="#usage">here</a></h3><br><br>
 
 
 <h3>ABAP Source code:</h3> <br><br><br>
