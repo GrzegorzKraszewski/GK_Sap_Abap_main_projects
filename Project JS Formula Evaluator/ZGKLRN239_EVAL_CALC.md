@@ -1600,19 +1600,33 @@ ENDMODULE.
 ![description_of_usage](https://github.com/user-attachments/assets/5e3edef6-5a42-4963-bc13-d05cbfeb37c6)
 
 <ol type="1">
-<li>Section</li>
+<li>Section - tools for program</li>
 <br>
          
 <ul>
 <li>a - Button to exit from program </li>
-<li>b - Button to  Save in Database</li>
+<li>b - Button to  Save entrie with formula in Database</li>
 <li>c - Button to  Display/Change Editor (Section 2)</li>
 <li>d - Button to  Clear all from Editor (Section 2)</li>
 <li>b - Button to  Delete entrie with formula from Database</li>
 </ul>
 
 <br>       
-<li>Punkt drugi</li>
+<li>Section - tools for Editor</li>
+<br>
+<ul>
+<li>a - Area to fill calculations/formula in Editor </li>
+<li>b - Button to cut in Editor</li>
+<li>c - Button to copy into Editor</li>
+<li>d - Button to insert into Editor<</li>
+<li>e - Button to Undo in Editor<</li>         
+<li>f - Button to Restore in Editor</li>
+<li>g - Button to Find/replace in Editor</li>
+<li>h - Button to Find next in Editor</li>
+<li>i - Button to Load local file in Editor</li>
+<li>j - Button to Save as local file in Editor</li>
+</ul>
+<br>         
 <li>Punkt trzeci</li>
 </ol>
 
