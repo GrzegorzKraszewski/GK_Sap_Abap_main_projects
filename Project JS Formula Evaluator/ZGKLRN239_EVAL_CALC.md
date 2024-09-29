@@ -1597,7 +1597,9 @@ ENDMODULE.
 <h2>Usage/behavior of program : </h2>  
 <br><br>   
 
-<h3>explanation</h3>
+![description_of_usage](https://github.com/user-attachments/assets/5e3edef6-5a42-4963-bc13-d05cbfeb37c6)
+
+<h3>Explanation</h3>
 
 <h3>What we can do/what we can use in program operators methods etc.</h3>
 <h3>Useful and supported operators methods</h3>
