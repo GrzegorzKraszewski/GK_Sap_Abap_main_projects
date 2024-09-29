@@ -1600,7 +1600,7 @@ ENDMODULE.
 ![description_of_usage](https://github.com/user-attachments/assets/71821c0b-499d-4725-b8ac-bb829399443a)
 
 <ol type="1">
-<li>Section - tools for program</li>
+<li>Section - main tools for program</li>
 <br>
          
 <ul>
