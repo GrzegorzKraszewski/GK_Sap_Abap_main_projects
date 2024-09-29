@@ -1597,7 +1597,7 @@ ENDMODULE.
 <h2>Usage/behavior of program : </h2>  
 <br><br>   
 
-![description_of_usage](https://github.com/user-attachments/assets/5e3edef6-5a42-4963-bc13-d05cbfeb37c6)
+![description_of_usage](https://github.com/user-attachments/assets/71821c0b-499d-4725-b8ac-bb829399443a)
 
 <ol type="1">
 <li>Section - tools for program</li>
