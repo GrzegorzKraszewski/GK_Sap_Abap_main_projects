@@ -14,7 +14,7 @@
 <h3> Too see usage/behavior of program please click <a href="#usage">here</a></h3<br><br>
 
 
-<h3>Source code:</h3> <br><br><br>
+<h3>ABAP Source code:</h3> <br><br><br>
 *&---------------------------------------------------------------------*<br>
 *& Report ZGKLRN239_EVAL_CALC<br>
 *&---------------------------------------------------------------------*<br>
