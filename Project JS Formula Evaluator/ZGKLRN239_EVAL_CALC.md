@@ -7,11 +7,11 @@
 <p>We aren't declairng variables in editor as let, var etc.</p>
 <p>Posible variables to use are embedded in var listbox => there are used macros for it and we creating a list with accessible variables to use in program</p>
 <p>Program present possible useful operators methods etc.</p>
-<h3>The final look of the program:</h3><br><br> 
+<h3>The final look of the program:</h3><br>
 
 ![Final_look](https://github.com/user-attachments/assets/3ae086db-db1d-4e98-8fce-2c59361eada0)
 
-<br><br>
+<br>
 <h6 id="usageb"></h6>
 <h3> Too see usage/behavior of program please click <a href="#usage">here</a></h3><br><br>
 
