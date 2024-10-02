@@ -1970,6 +1970,10 @@ eval("if ( cond1 || cond2 ) { true; } else { false; }")
 <br><br>
 <h3>More compleks formula example:</h3>
 
+![more_complex_formula_example](https://github.com/user-attachments/assets/87b5afeb-50d2-4fa3-87e0-7722c824137d)
+
+<br>
+<p>Thank you!</p>
 <br>
 <p>Sources for JS Code :</p>
 <p>https://www.w3schools.com/js/</p>
