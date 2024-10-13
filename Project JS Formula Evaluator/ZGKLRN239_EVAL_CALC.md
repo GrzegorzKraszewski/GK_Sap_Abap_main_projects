@@ -1693,7 +1693,8 @@ ENDMODULE.
 <li> Assignment (=) </li>
 <li>Increment ( ++ ) </li>
 <li>Decrement ( -- ) </li>
-<li>Exponentiation ( ** )   =>use this object Math.pow()</li> 
+ <h6 id=mathpowb"></h6>        
+<li>Exponentiation ( ** )   =>use this object <a href="#mathpow">Math.pow()</a></li> 
 </ul>
 </ol>
 
