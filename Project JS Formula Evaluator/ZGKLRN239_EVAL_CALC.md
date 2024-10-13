@@ -1759,7 +1759,7 @@ ENDMODULE.
 
 ![Math max](https://github.com/user-attachments/assets/21f17eed-0c6b-4005-94dd-e753e8973aef)
 
-<li>pow</li>
+<li id = "mathpow"><a href="#mathpowb">pow</a></li>
 
 ![Math pow](https://github.com/user-attachments/assets/7932043f-9d32-46bc-92bb-b31b0a699a0d)
 
