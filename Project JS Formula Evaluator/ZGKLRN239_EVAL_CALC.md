@@ -614,7 +614,7 @@ ENDIF.
                           ( key = 7 text = `if ( condition ) { true; } else { false; }` )
                           ( key = 8 text = `Math.min( , n..)`)
                           ( key = 9 text = `Math.max( , n..)`)
-                          ( key = 10 text = `Math.pow( , )`)
+                          ( key = 10 text = `Math.( , )`)
                           ( key = 11 text = `Math.round( )`)
                           ( key = 12 text = `Math.ceil( )`)
                           ( key = 13 text = `Math.floor( )`)
@@ -1693,8 +1693,8 @@ ENDMODULE.
 <li> Assignment (=) </li>
 <li>Increment ( ++ ) </li>
 <li>Decrement ( -- ) </li>
- <h6 id=mathpowb"></h6>        
-<li>Exponentiation ( ** )   =>use this object <a href="#mathpow">Math.pow()</a></li> 
+    
+<li>Exponentiation ( ** )   =>use this objectMath.pow()</li> 
 </ul>
 </ol>
 
@@ -1760,7 +1760,6 @@ ENDMODULE.
 ![Math max](https://github.com/user-attachments/assets/21f17eed-0c6b-4005-94dd-e753e8973aef)
 
 <li>pow</li>
-<li> < p id="mathpow"><a href="#mathpowb">pow</a></p></li>
 
 ![Math pow](https://github.com/user-attachments/assets/7932043f-9d32-46bc-92bb-b31b0a699a0d)
 
